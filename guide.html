@@ -1,0 +1,26 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="RF Wireless Lab publishing guide: how to upload lessons, PDFs, and tools to GitHub Pages."><title>Publishing guide | RF Wireless Lab</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/style.css"><script defer src="assets/i18n.js"></script></head><body data-page="guide">
+<header class="topbar page-topbar"><div class="shell nav-row"><a href="./" class="brand"><span class="brand-symbol"><svg viewBox="0 0 42 42" fill="none"><path d="M9 24.5c8-8 16-8 24 0M14 29c5-5 9-5 14 0" stroke="#81F7CF" stroke-width="2.6" stroke-linecap="round"/><circle cx="21" cy="34" r="2.7" fill="#81F7CF"/></svg></span><span class="brand-words"><strong>RF Wireless Lab</strong><small>RF &amp; Wireless Engineering</small></span></a><div class="nav-actions" style="margin-left:auto"><a class="nav-cta" href="./" data-i18n="nav.back">Về trang chủ</a><div class="language-control"><select data-lang-switch aria-label="Display language"><option value="vi">VI · Tiếng Việt</option><option value="en">EN · English</option><option value="zh">中文 · 简体</option></select></div></div></div></header>
+<main class="content-page"><a href="./#publish" class="back-link" data-i18n="nav.back">Về trang chủ</a><div class="page-label" data-i18n="guide.kicker">HƯỚNG DẪN CHO NGƯỜI QUẢN TRỊ</div><h1 data-page-title data-i18n="guide.title">Cách thêm bài học, PDF và công cụ</h1><p class="page-lead" data-i18n="guide.lead">Không cần thuê thêm hosting hoặc cài backend. Các thay đổi đều thực hiện từ GitHub repository của bạn.</p><div class="guide-alert" data-i18n="guide.warning">Trang này chỉ hướng dẫn quản trị. Khách truy cập không thể tự upload tài liệu lên GitHub Pages.</div><div class="guide-layout" style="margin-top:24px"><div class="guide-main">
+<section class="panel guide-panel"><h2 data-i18n="guide.step1">1. Upload tệp</h2><p data-i18n="guide.step1body">Trong GitHub, mở docs/ (PDF), lessons/ (bài HTML) hoặc tools/ (công cụ HTML). Chọn Add file → Upload files, sau đó Commit changes.</p><a class="button button-outline" href="https://github.com/trongtoando-rfsystem/rfwirelesslab" target="_blank" rel="noopener noreferrer" data-i18n="guide.git">Mở repository GitHub</a></section>
+<section class="panel guide-panel"><h2 data-i18n="guide.step2">2. Cập nhật danh sách</h2><p data-i18n="guide.step2body">Mở assets/content.js, nhấn biểu tượng bút chì, thêm một đối tượng vào lessons, tools hoặc resources. Điền đủ vi, en và zh.</p><a class="button button-outline" href="https://github.com/trongtoando-rfsystem/rfwirelesslab/edit/main/assets/content.js" target="_blank" rel="noopener noreferrer" data-i18n="guide.openContent">Chỉnh sửa danh mục content.js</a><div class="code-sample"><h3 data-i18n="guide.example">Ví dụ thêm một PDF</h3><pre id="code-example">{
+  id: 'beamforming-intro',
+  category: 'beamforming',
+  format: 'PDF',
+  href: 'docs/beamforming-intro.pdf',
+  title: {
+    vi: 'Bài giảng Beamforming',
+    en: 'Beamforming Lecture',
+    zh: '波束赋形课程'
+  },
+  description: {
+    vi: 'Giới thiệu Beamforming.',
+    en: 'Introduction to beamforming.',
+    zh: '波束赋形入门。'
+  },
+  tags: ['beamforming', 'MIMO']
+},</pre><button class="copy-code" id="copy-code" type="button" data-i18n="guide.exampleCopy">Sao chép mẫu</button></div></section>
+<section class="panel guide-panel"><h2 data-i18n="guide.step3">3. Chờ xuất bản</h2><p data-i18n="guide.step3body">Sau khi nhấn Commit changes, mở tab Actions để theo dõi quá trình xuất bản. Tải lại rfwirelesslab.com khi deployment thành công.</p><a class="button button-outline" href="https://github.com/trongtoando-rfsystem/rfwirelesslab/actions" target="_blank" rel="noopener noreferrer">GitHub Actions ↗</a></section>
+</div><aside class="guide-aside"><div class="panel"><h2 data-i18n="guide.notes">Ghi nhớ</h2><ul><li data-i18n="guide.note1">Tên file không dấu và không khoảng trắng, ví dụ: docs/beamforming-intro.pdf.</li><li data-i18n="guide.note2">Liên kết nội bộ phải khớp chính xác tên file, kể cả chữ hoa và chữ thường.</li><li data-i18n="guide.note3">Các bài PDF giữ nguyên ngôn ngữ bên trong; bộ chuyển ngôn ngữ chỉ thay đổi phần giao diện và metadata.</li><li data-i18n="guide.note4">Công cụ HTML bên ngoài không tự dịch; cần dùng assets/i18n.js hoặc tạo bản dịch trong từng công cụ.</li></ul></div></aside></div></main>
+<footer class="plain-footer"><div class="shell"><span>© RF Wireless Lab · rfwirelesslab.com</span><a href="./" data-i18n="nav.back">Về trang chủ</a></div></footer>
+<script>document.addEventListener('DOMContentLoaded',()=>{document.getElementById('copy-code').addEventListener('click',async()=>{const txt=document.getElementById('code-example').textContent;try{await navigator.clipboard.writeText(txt);document.getElementById('copy-code').textContent='✓';setTimeout(()=>window.RFW_I18N.localize(),1300)}catch(e){const sel=window.getSelection(),range=document.createRange();range.selectNodeContents(document.getElementById('code-example'));sel.removeAllRanges();sel.addRange(range)}})});</script>
+</body></html>
