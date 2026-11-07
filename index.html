@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Thư viện bài học và công cụ kỹ thuật miễn phí cho nghiên cứu, thiết kế anten và hệ thống vô tuyến.">
+  <meta name="theme-color" content="#0b1220">
+  <title>RF Wireless Lab | RF & Wireless Engineering</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/content.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="RF Wireless Lab - trang chủ"><span class="brand-mark">⌁</span><span>RF<span class="brand-second"> Research Lab</span></span></a>
+      <nav class="main-nav" aria-label="Điều hướng chính">
+        <a href="#lessons">Bài học</a><a href="#tools">Công cụ</a><a href="#publish">Đăng tài liệu</a>
+      </nav>
+      <a class="nav-cta" href="#tools">Bắt đầu <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow"><span class="live-dot"></span> RF & WIRELESS ENGINEERING</div>
+          <h1>Learn. Design.<br><span class="gradient-text">Simulate. Innovate.</span></h1>
+          <p class="hero-lead">Khám phá bài học, kiến thức chuyên sâu và công cụ thiết kế RF, anten, beamforming và 5G/6G ngay trên trình duyệt. Không cần cài đặt phần mềm cho các công cụ HTML/JavaScript cơ bản.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#tools">Khám phá công cụ <span>↗</span></a><a class="btn btn-secondary" href="#lessons">Xem thư viện bài học <span>→</span></a></div>
+          <div class="hero-facts"><span>◉ Website tĩnh</span><span>◉ Chạy trên GitHub Pages</span><span>◉ Dễ mở rộng</span></div>
+        </div>
+        <div class="visual-card" aria-label="Minh họa búp sóng anten">
+          <div class="visual-top"><span><span class="mini-dot"></span> ANTENNA ANALYSIS</span><span>LIVE DEMO</span></div>
+          <div class="plot-wrap"><svg viewBox="0 0 440 270" role="img" aria-label="Mô phỏng biểu đồ búp sóng của anten mảng">
+            <defs><linearGradient id="beamFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#50e7bf" stop-opacity=".28"/><stop offset="1" stop-color="#50e7bf" stop-opacity="0"/></linearGradient></defs>
+            <g stroke="#26374e" stroke-width="1"><path d="M28 40H416 M28 90H416 M28 140H416 M28 190H416 M28 240H416 M28 40V240 M125 40V240 M222 40V240 M319 40V240 M416 40V240"/></g>
+            <path d="M28 232 C70 228 86 220 113 229 C140 231 146 218 166 211 C190 200 189 73 222 58 C254 73 252 201 278 211 C298 218 304 231 332 229 C358 220 374 228 416 232 L416 240 L28 240Z" fill="url(#beamFill)"/>
+            <path d="M28 232 C70 228 86 220 113 229 C140 231 146 218 166 211 C190 200 189 73 222 58 C254 73 252 201 278 211 C298 218 304 231 332 229 C358 220 374 228 416 232" fill="none" stroke="#50e7bf" stroke-width="3" stroke-linecap="round"/>
+            <path d="M222 32V240" stroke="#f8bf64" stroke-width="1.5" stroke-dasharray="5 5"/>
+            <circle cx="222" cy="58" r="5.5" fill="#f8bf64" stroke="#0d1726" stroke-width="3"/>
+            <g fill="#7f9bb6" font-size="11" font-family="system-ui"><text x="28" y="257">-90°</text><text x="207" y="257">0°</text><text x="391" y="257">90°</text><text x="32" y="32">0 dB</text><text x="32" y="210">-40 dB</text></g>
+          </svg></div>
+          <div class="visual-bottom"><div><small>MAIN BEAM</small><strong>0.0°</strong></div><div><small>ARRAY SIZE</small><strong>8 elements</strong></div><div><small>TYPE</small><strong>ULA</strong></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="feature-strip"><div class="container feature-grid"><div><span class="feature-icon">▣</span><div><strong>Kho bài học</strong><small>HTML, PDF và liên kết</small></div></div><div><span class="feature-icon">⌁</span><div><strong>Công cụ tương tác</strong><small>Tính toán trực tiếp</small></div></div><div><span class="feature-icon">↗</span><div><strong>Chia sẻ dễ dàng</strong><small>Truy cập bằng đường dẫn web</small></div></div></div></section>
+    <section class="section" id="lessons">
+      <div class="container">
+        <div class="section-head"><div><div class="section-kicker">01 / KNOWLEDGE BASE</div><h2>Thư viện <span class="muted-heading">bài học</span></h2><p>Tài liệu nghiên cứu được sắp xếp theo lĩnh vực để dễ tra cứu.</p></div><span class="section-tag" id="lesson-count">0 tài liệu</span></div>
+        <div class="search-panel"><label class="search-field"><span aria-hidden="true">⌕</span><input id="lesson-search" type="search" placeholder="Tìm bài học, chủ đề, từ khóa..." aria-label="Tìm kiếm bài học"></label><div class="filters" id="filters" role="group" aria-label="Lọc lĩnh vực"></div></div>
+        <div class="cards" id="lesson-list"></div><p class="empty" id="lesson-empty" hidden>Không tìm thấy bài học phù hợp.</p>
+      </div>
+    </section>
+    <section class="section section-alt" id="tools">
+      <div class="container"><div class="section-head"><div><div class="section-kicker">02 / ENGINEERING TOOLKIT</div><h2>Công cụ <span class="muted-heading">nghiên cứu</span></h2><p>Các tiện ích thực hành chạy ngay trong trình duyệt, không cần máy chủ xử lý.</p></div><span class="section-tag" id="tool-count">0 công cụ</span></div><div class="cards" id="tool-list"></div><p class="hint">Các công cụ mẫu dùng mô hình lý tưởng để học tập và kiểm tra nhanh. Kết quả không thay thế phần mềm mô phỏng, hiệu chuẩn hay đo kiểm chuyên dụng.</p></div>
+    </section>
+    <section class="section" id="publish"><div class="container"><div class="section-head"><div><div class="section-kicker">03 / PUBLISH</div><h2>Đăng nội dung <span class="muted-heading">mới</span></h2><p>Trang mẫu này được quản trị bằng kho mã GitHub. Bạn có thể thêm tài liệu và công cụ bất cứ lúc nào.</p></div></div><div class="steps"><div class="step"><span>01</span><h3>Đưa tệp lên GitHub</h3><p>Tải PDF vào thư mục <code>docs/</code>, bài học HTML vào <code>lessons/</code> hoặc công cụ HTML vào <code>tools/</code>.</p></div><div class="step"><span>02</span><h3>Cập nhật danh mục</h3><p>Mở <code>assets/content.js</code>, thêm tiêu đề, mô tả, chủ đề và liên kết đến tệp của bạn.</p></div><div class="step"><span>03</span><h3>Lưu thay đổi</h3><p>Chọn <strong>Commit changes</strong>. GitHub Pages sẽ xuất bản phiên bản mới sau khi triển khai xong.</p></div></div><div class="publish-note"><strong>🔒 Lưu ý bảo mật</strong><p>Nội dung của website công khai có thể được mọi người xem và tải xuống. Không đăng tài liệu nội bộ, mã nguồn độc quyền hoặc thông số thiết kế mật khi chưa được phép.</p></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><div><a class="brand" href="./"><span class="brand-mark">⌁</span><span>RF Wireless Lab</span></a><p>rfwirelesslab.com • RF & Wireless Engineering</p></div><a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false">Lên đầu trang ↑</a></div></footer>
+</body>
+</html>
