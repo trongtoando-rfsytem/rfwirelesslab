@@ -1,0 +1,1084 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Antenna Array Studio PRO V5 · Compact Web Layout · 4096 Elements</title>
+<style>
+:root{--navy:#101d36;--navy2:#192c4f;--ink:#18253c;--muted:#6e7c91;--line:#dbe3ee;--bg:#f3f6fb;--blue:#2868e8;--cyan:#00b8d4;--orange:#e87936;--soft:#f6f9fd;--radius:14px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);font-size:13px}button,input,select{font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}.topbar{background:linear-gradient(105deg,#0d1b33,#213d68);color:white;display:flex;align-items:center;justify-content:space-between;padding:15px 26px;gap:14px;border-bottom:3px solid #f4a15e}.brand{display:flex;gap:12px;align-items:center}.logo{width:43px;height:43px;border:1px solid #627baa;border-radius:13px;display:grid;place-items:center;background:#ffffff13;font-size:26px;color:#91cbff}.brand strong{font-size:19px;letter-spacing:.4px}.brand small{display:block;color:#b2c7e5;font-size:11px;margin-top:4px}.header-actions{display:flex;align-items:center;gap:7px;flex-wrap:wrap}.btn{border:1px solid #cad4e3;background:#fff;color:#274167;border-radius:9px;padding:9px 12px;font-weight:650;white-space:nowrap;transition:.15s}.btn:hover{background:#ecf3ff;border-color:#87a8dd}.btn.dark{background:#ffffff13;color:#e1eefe;border-color:#ffffff3a}.btn.dark:hover{background:#ffffff30}.btn.primary{background:#2468ec;color:white;border-color:#2468ec}.btn.primary:hover{background:#1653ce}.btn.warn{background:#fff4ea;color:#bb5b23;border-color:#f3d8bf}.btn.small{font-size:12px;padding:6px 9px}.btn.active{background:#dce9ff;border-color:#6a9ceb;color:#1156bd}.app{max-width:1940px;margin:auto;padding:18px 22px 35px}.statusline{margin-bottom:13px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.status-tag{display:inline-flex;align-items:center;gap:7px;color:#3e536e;font-size:12px}.status-dot{height:7px;width:7px;border-radius:50%;background:#13ae81}.hint{color:#78859a;font-size:12px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 325px;gap:15px}.visuals{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:15px;align-content:start}.card{background:white;border:1px solid #e0e7f0;box-shadow:0 3px 15px #122c5210;border-radius:var(--radius);overflow:hidden}.cardhead{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 15px;border-bottom:1px solid #e9eef5;min-height:58px}.cardtitle{font-size:14px;font-weight:800;color:#193256;letter-spacing:.1px}.cardsub{font-size:11px;color:#8390a5;margin-top:3px}.toolrows{display:flex;gap:5px;align-items:center}.chip{border:1px solid #d9e3f0;background:#f8fbff;border-radius:7px;padding:6px 8px;font-weight:700;font-size:11px;color:#546a87}.chip.sel{border-color:#5285e7;background:#e8f0ff;color:#1256c7}.canvasbox{padding:12px 13px 0}.canvas2d{width:100%;height:380px;display:block;border-radius:8px}.canvas3d{width:100%;height:380px;display:block;border-radius:10px;background:#101e34;touch-action:none;cursor:grab}.canvas3d:active{cursor:grabbing}.graphfoot{min-height:50px;padding:10px 14px 13px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;color:#6a7b94;font-size:11px}.check{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;cursor:pointer}.check input{accent-color:#2f75e6}.legend{display:flex;gap:12px;flex-wrap:wrap}.legend span:before{content:'';display:inline-block;width:14px;border-top:3px solid var(--trace);vertical-align:middle;margin-right:5px}.param{grid-row:span 2}.sect{padding:13px 15px;border-bottom:1px solid #e6eaf1}.sect:last-child{border-bottom:0}.sechead{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px;font-weight:800;color:#516d8d;text-transform:uppercase;letter-spacing:.7px;margin-bottom:11px}.field{display:grid;grid-template-columns:minmax(0,1fr) 122px;align-items:center;gap:10px;margin:9px 0}.field label{color:#3f516b;font-size:12px}.field input,.field select{width:100%;height:32px;background:#fbfcff;border:1px solid #cfd9e7;border-radius:6px;padding:5px 8px;color:#193253}.field input:focus,.field select:focus,.coeff input:focus{outline:2px solid #8db5ff;outline-offset:0}.unit{font-size:11px;color:#8796aa}.row2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.row2 .field{display:block}.row2 .field label{display:block;margin-bottom:5px}.row2 .field input,.row2 .field select{width:100%}.stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.metric{border:1px solid #e0e7f0;background:white;padding:15px;border-radius:11px;min-width:0;box-shadow:0 2px 12px #122c5209}.metric small{display:block;color:#7c8ba1;font-size:11px;margin-bottom:5px}.metric strong{display:block;color:#1c395d;font-size:22px;font-variant-numeric:tabular-nums;white-space:nowrap}.metric em{font-style:normal;color:#8d9bb0;font-size:10px}.metric strong .deg{font-size:13px;color:#8492a3}.plot-note{grid-column:1/-1;padding:10px 12px;background:#f0f7ff;border:1px solid #d9e9fc;color:#385c81;font-size:12px;border-radius:9px;line-height:1.5}.settings-box{display:flex;gap:6px;flex-wrap:wrap}.pills{display:flex;gap:6px;flex-wrap:wrap}.pill{display:inline-flex;gap:5px;align-items:center;padding:6px 9px;border:1px solid #d6e0ef;border-radius:8px;background:#f8fbff;cursor:pointer;font-size:11px;font-weight:650}.pill input{accent-color:#2974e8}.trace-choice{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.tracebtn{height:38px;border:1px solid #dae2ee;border-radius:8px;background:#f7f9fd;font-weight:700;color:#4d6180}.tracebtn.active{background:#eaf2ff;border-color:#7ca6ec;color:#2359b9}.tracebtn .circle{width:9px;height:9px;border-radius:50%;display:inline-block;background:var(--trace);margin-right:4px}.tracebtn.has{box-shadow:inset 0 -3px var(--trace)}.readme{color:#718096;font-size:11px;line-height:1.6}.editor{margin-top:15px}.editorhead{padding:15px 16px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;border-bottom:1px solid #e1e8f1}.editorhead p{margin:4px 0 0;color:#8290a4;font-size:12px}.edit-body{padding:8px 14px 15px}.editorrow{display:grid;grid-template-columns:173px minmax(0,1fr);gap:11px;align-items:center;margin:8px 0}.rowlabel{display:flex;gap:7px;align-items:center;flex-wrap:wrap;color:#516985;font-weight:700;font-size:12px}.scrollbox{overflow-x:auto;max-width:100%;border:1px solid #dbe4ef;border-radius:7px;background:#f9fbfe}.coeff{border-collapse:collapse;table-layout:fixed;white-space:nowrap}.coeff th{background:#eaf0f8;color:#3a587c;font-size:11px;font-weight:700;height:24px;border-right:1px solid #d3e0ec;min-width:68px;padding:4px 5px}.coeff td{border-top:1px solid #dae5f1;border-right:1px solid #dae5f1;padding:3px}.coeff input{width:61px;height:28px;border:1px solid transparent;border-radius:5px;padding:2px 4px;text-align:right;background:#fff;color:#1b2d4a}.coeff input:focus{background:#fff;outline:2px solid #8db5ff}.coeff input.edited{color:#0b62d9;font-weight:700}.footer{margin-top:17px;color:#8d9bb0;font-size:11px;line-height:1.5}.axis-dl{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;padding:4px 8px;border-radius:6px;background:#e5f2ff;color:#1257a7;font-size:10px;font-weight:750}.note3d{font-size:11px;color:#9fbbd7}.bgroup{display:flex;gap:7px;flex-wrap:wrap}.detail-list{display:grid;gap:8px}.peakitem{font-size:11px;color:#576e8a;background:#f5f9fe;padding:6px 8px;border-radius:5px;display:flex;justify-content:space-between;gap:8px}.peakitem b{color:#214f9e}.separator{border-top:1px solid #edf0f6;margin:12px 0}.plotlabel{font-size:11px;color:#4b6686}.field input[type=number]{font-variant-numeric:tabular-nums}.loading{opacity:.6;pointer-events:none}@media(max-width:1250px){.layout{grid-template-columns:1fr}.param{grid-row:auto;grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}.param .sect{border-right:1px solid #e7ecf5}.visuals{grid-template-columns:1fr 1fr}}@media(max-width:800px){.topbar{padding:12px;align-items:flex-start;flex-direction:column}.app{padding:12px}.visuals{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.param{display:block}.editorrow{grid-template-columns:1fr}.canvas2d,.canvas3d{height:310px}.brand strong{font-size:16px}.metric strong{font-size:18px}}
+
+/* Studio PRO additions */
+.tipmini{color:#657894;font-size:11px;line-height:1.55;margin:4px 0}.tipmini strong{color:#27558a}.tipmini code{background:#eaf0f8;color:#244c80;padding:1px 3px;border-radius:3px;font-size:10px}.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.row3 .field{display:block;margin:5px 0}.row3 .field label{font-size:10px;display:block;margin-bottom:3px}.arraymap-wrap{margin:0 14px 15px;border:1px solid #d9e4f1;border-radius:12px;padding:13px;background:#f9fbfe}.arraymap-sub{color:#7789a1;font-size:11px;margin:8px 0 7px}.arraycanvas{width:100%;height:220px;background:#fff;border:1px solid #dce5f0;border-radius:8px;display:block;cursor:crosshair}.toolrows{flex-wrap:wrap}.chip[data-cut]{font-size:11px;min-width:30px}.maphighlight{color:#1a60c2;font-weight:700}@media(max-width:800px){.arraycanvas{height:170px}}
+
+/* V3: scalable true-coordinate geometry and bounded editor DOM */
+.editor-pager{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 15px;background:#f6f9fe;border-bottom:1px solid #e1e8f1;color:#2d4f79}
+.pager-left{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.pager-left b{font-size:12px}.pager-left span{font-size:12px}.pager-note{color:#8595aa!important;font-weight:400;font-size:11px!important}
+.editor-pager label{font-weight:700;font-size:12px}.editor-pager input{width:64px;padding:5px 6px;border-radius:6px;border:1px solid #c5d5e9;background:white;text-align:center}
+.arraymap-heading{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.arraymap-controls{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.arraymap-controls strong{color:#2f5d98;min-width:42px;text-align:center;font-size:11px}
+.mapheight-label{font-size:11px;display:inline-flex;align-items:center;gap:5px;color:#5c7293}.mapheight-label select{padding:6px 5px;border:1px solid #cfdbeb;border-radius:6px;color:#345577;background:white}
+.arraymap-stage{height:420px;min-height:220px;position:relative;overflow:hidden;border:1px solid #dce5f0;border-radius:9px;background:white;resize:vertical}
+.arraycanvas{height:100%!important;min-height:0!important;width:100%;border:none;border-radius:0;display:block;cursor:grab;touch-action:none}
+.arraycanvas:active{cursor:grabbing}.arraymap-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+@media(max-width:800px){.arraymap-stage{height:400px}.arraymap-controls{width:100%}.editor-pager{align-items:flex-start}}
+
+/* V4 hierarchical RF-port / subarray workflow */
+.sub-panel{padding:16px 17px 18px;background:#fff;border-bottom:1px solid #e1eaf5}
+.sub-intro{font-size:12px;line-height:1.6;color:#637995;margin:5px 0 14px}
+.sub-summary{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0}
+.sub-stat{min-width:135px;flex:1;border:1px solid #dbe7f6;background:#f5f9ff;border-radius:9px;padding:10px 12px}
+.sub-stat small{color:#6883a7;font-size:10px;display:block}.sub-stat strong{font-size:18px;color:#1c4f9d}
+.sub-layout{display:grid;grid-template-columns:minmax(0,2fr) minmax(255px,1fr);gap:13px;margin-top:8px}
+.sub-card{min-width:0;border:1px solid #dbe5f2;border-radius:11px;padding:12px;background:#fbfdff}
+.sub-card h3{font-size:13px;color:#17385f;margin:0 0 7px}
+.sub-tools{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:8px 0}
+.sub-tools label{font-weight:650;color:#456186}
+.sub-tools input,.sub-tools select{border:1px solid #cad8e9;border-radius:6px;padding:5px 6px;background:#fff;color:#234466;max-width:88px}
+.port-row{margin:10px 0 13px;border:1px solid #cbdced;border-radius:9px;background:#fff;overflow:hidden}
+.port-row-title{padding:10px 12px;background:#ecf4ff;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#225183;font-size:12px;font-weight:800}
+.port-row small{font-size:11px;font-weight:500;color:#6384a4}
+.port-scroller{overflow-x:auto;max-width:100%;scrollbar-color:#a6b9d3 #edf3f9}
+.port-table{border-collapse:separate;border-spacing:0;min-width:100%;font-size:12px}
+.port-table th,.port-table td{border-bottom:1px solid #e5edf7;border-right:1px solid #e5edf7;padding:6px;text-align:center;white-space:nowrap}
+.port-table thead th{background:#dfeafa;color:#234f85;font-size:11px;position:sticky;top:0;z-index:1}
+.port-table .side{background:#f3f7fd;color:#587394;min-width:115px;text-align:left;font-weight:750;position:sticky;left:0;z-index:2}
+.port-table td{min-width:105px}.port-table input{min-width:88px;width:90px;border:1px solid #d9e5f2;background:#fff;padding:6px 5px;border-radius:6px;text-align:right;color:#143b66}
+.port-table input:focus,.template-table input:focus{outline:2px solid #91baff}
+.port-table th.port-selected,.port-table td.port-selected{background:#fff3df!important}
+.template-scroll{max-height:330px;overflow:auto;border:1px solid #e1eaf5;border-radius:7px}
+.template-table{width:100%;border-collapse:collapse;font-size:11px}
+.template-table td,.template-table th{border-bottom:1px solid #e5ecf5;padding:5px;text-align:center;white-space:nowrap}
+.template-table th{position:sticky;top:0;background:#edf5ff;color:#375d89}
+.template-table input{width:65px;border:1px solid #cddbed;border-radius:5px;padding:5px;text-align:right;color:#274a73}
+.template-table .internal-mark{background:#e2f3ef;border-radius:7px;padding:3px 6px;color:#09735d;font-weight:800}
+.sub-empty{padding:15px;color:#7088a2}
+.map-port-legend{display:flex;gap:13px;flex-wrap:wrap;font-size:11px;color:#627a98;margin:5px 0}
+.map-port-legend i{display:inline-block;vertical-align:middle;width:15px;height:11px;border:2px solid #1c9a7d;margin-right:3px;border-radius:3px}
+.warning-inline{padding:9px 11px;border-radius:7px;background:#fff7ea;color:#9a5a20;font-size:11px;line-height:1.5;border:1px solid #ffe1b8}
+@media(max-width:1000px){.sub-layout{grid-template-columns:1fr}}
+
+
+/* V5 COMPACT LAYOUT: charts + RF editor in one continuous left workspace */
+.layout{align-items:start;grid-template-columns:minmax(0,1fr) clamp(300px,24vw,355px)}
+.visuals{min-width:0;align-content:start;grid-auto-flow:row}
+.visuals > .editor{grid-column:1/-1;min-width:0;margin-top:0;align-self:start}
+.visuals > .plot-note{margin:0}
+.param{grid-row:auto;min-width:0;align-self:start}
+.editor .sub-layout{grid-template-columns:minmax(0,1.55fr) minmax(238px,1fr)}
+.editor .sub-card{min-width:0}
+.editor .sub-summary{gap:7px}
+.editor .sub-stat{min-width:100px}
+.editor .port-table td{min-width:96px}
+.editor .port-table input{width:82px;min-width:76px}
+@media(min-width:1251px){
+ .param{position:sticky;top:10px;max-height:calc(100vh - 20px);overflow-y:auto;overscroll-behavior:contain;scrollbar-color:#b6c9e0 #f1f5fa}
+}
+@media(max-width:1250px){
+ .layout{grid-template-columns:minmax(0,1fr)}
+ .param{grid-row:auto;max-height:none;overflow:visible;position:static;order:initial}
+ .visuals{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+}
+@media(max-width:950px){
+ .editor .sub-layout{grid-template-columns:1fr}
+}
+@media(max-width:800px){
+ .visuals{grid-template-columns:minmax(0,1fr)}
+ .visuals > .editor{grid-column:1}
+ .editor .sub-layout{grid-template-columns:1fr}
+}
+
+
+/* Keep plotting/parameter controls usable on laptop and narrow screens */
+@media (min-width:1051px) and (max-width:1250px){
+ .layout{grid-template-columns:minmax(0,1fr) 305px}
+ .param{display:block;grid-row:auto;grid-column:auto;position:sticky;top:8px;max-height:calc(100vh - 16px);overflow-y:auto;overscroll-behavior:contain}
+ .visuals{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .editor .sub-layout{grid-template-columns:1fr}
+}
+@media (max-width:1050px){
+ .layout{display:flex;flex-direction:column}
+ .param{order:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;max-height:none;position:static;overflow:visible}
+ .visuals{order:1;width:100%}
+ .param .sect{border-right:1px solid #e7ecf5}
+}
+@media (max-width:800px){
+ .param{display:block}
+}
+
+</style>
+</head>
+<body>
+<header class="topbar"><div class="brand"><div class="logo">◎</div><div><strong>ANTENNA ARRAY STUDIO PRO V5</strong><small>RF Port / Subarray Mapping · URA Nx × Ny · CST · 3D Beam Peaks / HPBW</small></div></div><div class="header-actions"><button class="btn dark" id="loadCfg">↑ Load JSON</button><button class="btn dark" id="saveCfg">↓ Save JSON</button><button class="btn dark" id="saveCsv">↓ Export CSV</button><button class="btn dark" id="savePng">↓ Save 3D PNG</button><input id="fileInput" type="file" accept=".json,application/json" hidden></div></header>
+<main class="app">
+<div class="statusline"><span class="status-tag"><span class="status-dot"></span> Offline HTML · No MATLAB / web connection</span><span class="badge">CSV / JSON / CST ASCII</span><span class="hint" id="calcStatus">Sẵn sàng tính toán</span></div>
+<div class="layout">
+<section class="visuals">
+<div class="stats">
+  <div class="metric"><small>DIRECTIVITY</small><strong id="outD">—</strong><em>3D power integration · dBi</em></div>
+  <div class="metric"><small>MAIN PEAK</small><strong id="outPeak">—</strong><em>Azimuth / Elevation</em></div>
+  <div class="metric"><small>AZIMUTH HPBW</small><strong id="outAzBw">—</strong><em>−3 dB · horizontal cut</em></div>
+  <div class="metric"><small>ELEVATION HPBW</small><strong id="outElBw">—</strong><em>−3 dB · vertical cut</em></div>
+  <div class="metric"><small>ARRAY APERTURE</small><strong id="outSize">—</strong><em id="outCount">Element geometry</em></div>
+</div>
+<div class="card"><div class="cardhead"><div><div class="cardtitle">2D Radiation Pattern</div><div class="cardsub" id="cutDetails">Normalized power · Azimuth cut</div></div><div class="toolrows"><button class="chip sel" data-cut="az">AZ</button><button class="chip" data-cut="el">EL</button><button class="chip sel" data-plot="cart">Cartesian</button><button class="chip" data-plot="polar">Polar</button></div></div>
+<div class="canvasbox"><canvas id="plot2d" class="canvas2d"></canvas></div><div class="graphfoot"><div class="legend" id="traceLegend"></div><div class="axis-dl"><label class="check"><input type="checkbox" id="show2dPeaks" checked> Beam peaks</label><label class="check"><input type="checkbox" id="show2dBw" checked> −3 dB HPBW</label></div></div></div>
+<div class="card"><div class="cardhead"><div><div class="cardtitle">3D Beam / Radiation Pattern</div><div class="cardsub">Drag to rotate · Wheel to zoom · −3 dB contour</div></div><div class="toolrows"><button id="resetCamera" class="chip">↺ Reset view</button></div></div><div class="canvasbox"><canvas id="plot3d" class="canvas3d"></canvas></div><div class="graphfoot"><div class="settings-box"><label class="check"><input type="checkbox" id="show3dPeaks" checked> Peak markers</label><label class="check"><input type="checkbox" id="show3dContour" checked> −3 dB contour</label><label class="check"><input type="checkbox" id="show3dBw" checked> HPBW arcs</label></div><div class="note3d">Front hemisphere · 3D AF</div></div></div>
+<div class="plot-note" id="physicsNote">Đang khởi tạo...</div>
+<section class="card editor"><div class="editorhead"><div><div class="cardtitle">RF Port / Subarray feeding coefficients & positions</div><p>Chỉnh theo từng port row; thiết kế subarray nội bộ một lần và nhân rộng đến tối đa 4096 phần tử vật lý.</p></div><div class="bgroup"><button class="btn small" id="restoreDefault">↺ Example 24 ULA</button><button class="btn small warn" id="clearPhase">Reset phases to 0°</button><button class="btn small" id="export3dCsv">Export 3D CSV</button></div></div><div id="legacyEditor" style="display:none"><div class="editor-pager"><div class="pager-left"><b>Per-element editor</b><span id="editPageStatus">Elements 1–128</span><span class="pager-note">Nhập trực tiếp theo trang · CSV import/export áp dụng cho toàn bộ phần tử</span></div><div class="bgroup"><button class="btn small" id="pagePrev">← Previous</button><label>Page <input id="editPageNumber" type="number" min="1" value="1" aria-label="Editor page" /></label><span id="editPageTotal">/ 1</span><button class="btn small" id="pageNext">Next →</button></div></div><div class="edit-body"><div class="editorrow"><div class="rowlabel">① Magnitude <span class="unit" id="magnitudeType">Power</span></div><div class="scrollbox" id="amplitudeTable"></div></div><div class="editorrow"><div class="rowlabel">② Phase delay <span class="unit">degree (°)</span></div><div class="scrollbox" id="phaseTable"></div></div><div class="editorrow"><div class="rowlabel">③ Position X <span class="unit">mm</span></div><div class="scrollbox" id="posXTable"></div></div><div class="editorrow" id="positionYRow" style="display:none"><div class="rowlabel">④ Position Y <span class="unit">mm · vertical</span></div><div class="scrollbox" id="posYTable"></div></div></div></div>
+<div class="sub-panel">
+ <div class="cardtitle">RF PORT ROW EDITOR — physical 2D mapping</div>
+ <p class="sub-intro">Mỗi Row là một hàng <b>RF port</b> từ dưới lên trên (+Y). Các cột tăng theo +X. Weight và Phase đặt tại RF port; Position X/Y/Z (mm) là tọa độ phần tử tham chiếu (góc dưới-trái) của subarray. Click vào cổng trên sơ đồ để nhảy đến Row tương ứng.</p>
+ <div class="sub-summary" id="portStats"></div>
+ <div class="sub-layout"><div class="sub-card">
+ <h3>1 · RF Port feeding coefficients &amp; positions</h3>
+ <div class="sub-tools"><button class="btn small" id="portPrev">← Previous rows</button><label>Row bắt đầu <input type="number" min="1" id="portFirstRow" value="1"></label><label>Hiện <select id="portRowsShown"><option value="1">1 row</option><option value="2" selected>2 rows</option><option value="4">4 rows</option></select></label><button class="btn small" id="portNext">Next rows →</button><span id="portRowInfo" class="tipmini"></span></div>
+ <div id="portRowEditor"></div>
+ <div class="sub-tools"><button class="btn small" id="importPortCsv">↑ Import RF ports CSV</button><button class="btn small" id="exportPortCsv">↓ Export RF ports CSV</button><button class="btn small" id="downloadPortTemplate">Template CSV</button></div>
+ <div id="portImportStatus" class="tipmini">CSV theo port_row, port_col, weight, phase_deg, x_mm, y_mm, z_mm. Import theo đúng mapping.</div>
+ <input type="file" id="portCsvFile" accept=".csv,.txt,.tsv" hidden>
+ </div><div class="sub-card">
+ <h3>2 · Design ONE subarray → scale up</h3>
+ <div id="subTemplateInfo" class="sub-intro"></div>
+ <div class="sub-tools"><button class="btn small" id="resetTemplate">Reset nội bộ = 1 ∠ 0°</button><button class="btn small" id="internalSteer">Steer pha nội bộ</button></div>
+ <div class="template-scroll" id="subTemplateEditor"></div>
+ <div class="sub-tools"><button class="btn small" id="importTemplateCsv">↑ Import subarray template</button><button class="btn small" id="exportTemplateCsv">↓ Export template</button></div>
+ <div class="warning-inline">Hệ số điện trường thực tế: <b>sqrt(P_port × P_internal)</b> (Power) hoặc <b>V_port × V_internal</b> (Voltage). Pha: <b>φ_port + φ_internal</b>. Mẫu subarray được nhân cho toàn bộ các port.</div>
+ <input type="file" id="templateCsvFile" accept=".csv,.txt,.tsv" hidden>
+ </div></div>
+ <div class="sub-tools"><button class="btn small" id="importPhysicalCsv">↑ Import full 3D element mapping CSV</button><button class="btn small" id="exportPhysicalCsv">↓ Export full 3D element mapping CSV</button><input type="file" id="physicalCsvFile" accept=".csv,.txt,.tsv" hidden><span class="tipmini">Xuất cả element row/col, RF port, local row/col, weight/phase tổng và X/Y/Z.</span></div>
+ </div>
+<div class="arraymap-wrap"><div class="arraymap-heading"><div><div class="cardtitle">Antenna element & RF Port geometry (X horizontal / Y vertical)</div><p class="arraymap-sub">Vẽ từng phần tử vật lý, khoanh các subarray và đánh số RF port. Click element chọn port; kéo để pan; lăn chuột zoom.</p></div><div class="arraymap-controls"><button class="btn small" id="mapFit">⊞ Fit all</button><button class="btn small" id="mapZoomOut">− Zoom</button><strong id="mapZoomLabel">100%</strong><button class="btn small" id="mapZoomIn">+ Zoom</button><label class="mapheight-label">Height <select id="mapHeight"><option value="auto" selected>Auto</option><option value="420">420 px</option><option value="640">640 px</option><option value="900">900 px</option><option value="1200">1200 px</option></select></label></div></div><div id="arrayMapStage" class="arraymap-stage"><canvas id="arrayCanvas" class="arraycanvas"></canvas></div><div class="map-port-legend"><span><i></i> Port/subarray boundary</span><span><i style="border-color:#df870b"></i> Selected RF port</span><span>Row 1 ở đáy (+Y hướng lên)</span></div><div class="arraymap-bottom"><div id="selectedElement" class="arraymap-sub">Click an element</div><span class="arraymap-sub" id="mapScaleInfo">Fit-to-view</span></div></div></section>
+</section>
+<aside class="card param">
+<div class="sect"><div class="sechead">Array geometry <span class="badge" id="geometryBadge">ULA</span></div><div class="tipmini">Mảng phẳng: nhập riêng <strong>Nx cột ngang</strong> và <strong>Ny hàng dọc</strong> (tối đa 4.096 elements (64 × 64)).</div>
+<div class="field"><label for="arrayType">Array type</label><select id="arrayType"><option value="linear">Linear array (ULA)</option><option value="planar">Planar array (URA)</option></select></div>
+<div class="field"><label for="freq">Frequency (MHz)</label><input id="freq" type="number" min="1" max="100000" step="100" value="4800"></div>
+<div id="linearFields"><div class="field"><label for="count">Number of elements</label><input id="count" type="number" min="2" max="4096" step="1" value="24"></div></div>
+<div id="planarFields" style="display:none"><div class="row2"><div class="field"><label for="nx"><b>Horizontal Nx</b> (columns)</label><input id="nx" type="number" min="1" max="64" value="8"></div><div class="field"><label for="ny"><b>Vertical Ny</b> (rows)</label><input id="ny" type="number" min="1" max="64" value="4"></div></div><div class="tipmini" id="totalElements">Nx × Ny = 32 elements</div></div><div class="bgroup" style="margin:8px 0 4px"><button class="btn small" id="example8x4">8 × 4 URA</button><button class="btn small" id="example16x8">16 × 8 URA</button><button class="btn small" id="example64x64">64 × 64 · 4096</button></div>
+<div class="row2"><div class="field"><label for="dx">Spacing X (mm)</label><input id="dx" type="number" min="0.1" step="1" value="38"></div><div class="field"><label for="dy">Spacing Y (mm)</label><input id="dy" type="number" min="0.1" step="1" value="38"></div></div>
+<div class="field"><label for="elementPattern">Antenna element</label><select id="elementPattern"><option value="omni">Omnidirectional</option><option value="cos1">Cosine</option><option value="cos2" selected>Cosine²</option><option value="cos4">Cosine⁴</option><option value="cst">Imported CST pattern</option></select></div>
+<div class="field"><label for="gain">Element gain offset (dB)</label><input id="gain" type="number" value="0" step="0.5"></div></div>
+<div class="sect"><div class="sechead">Import / export element weights</div>
+ <div class="tipmini">Import file <b>CSV / TSV</b> gồm một dòng cho mỗi element. Các cột hỗ trợ: <code>element,row,col,weight,phase_deg,x_mm,y_mm</code>. Có thể nhập số thứ tự, hoặc chỉ theo thứ tự hàng → cột.</div>
+ <div class="bgroup" style="margin:10px 0"><button class="btn small" id="importWeights">↑ Import weights CSV</button><button class="btn small" id="exportWeights">↓ Export weights CSV</button><button class="btn small" id="sampleWeights">Template CSV</button></div>
+ <div class="tipmini" id="weightsStatus">No weights file imported.</div>
+ <input type="file" id="weightsFile" accept=".csv,.tsv,.txt, text/csv, text/plain" hidden>
+ </div>
+ <div class="sect"><div class="sechead">CST far-field pattern <span id="cstBadge" class="badge">Not loaded</span></div>
+ <div class="tipmini">Nhập pattern <b>ASCII</b> xuất từ CST Microwave Studio, ví dụ <code>Theta [deg], Phi [deg], Abs(Gain)[dB]</code>; hỗ trợ Eθ/Eφ magnitude khi tiêu đề cột rõ ràng. Có thể dùng pattern <b>một element</b> nhân với AF, hoặc pattern <b>toàn mảng</b> để so sánh. File <code>.ffs</code> nhị phân cần xuất lại ASCII.</div>
+ <div class="field"><label>CST pattern role</label><select id="cstRole"><option value="element">Single element × Array Factor</option><option value="total">Full-array CST reference only</option></select></div><div class="field"><label>Column mapping</label><select id="cstColumns"><option value="auto">Auto detect headers</option><option value="manual">Manual columns</option></select></div>
+ <div id="manualCst" style="display:none"><div class="row3"><div class="field"><label>Theta col #</label><input type="number" id="cstThetaCol" value="1" min="1"></div><div class="field"><label>Phi col #</label><input type="number" id="cstPhiCol" value="2" min="1"></div><div class="field"><label>Value col #</label><input type="number" id="cstValueCol" value="3" min="1"></div></div><div class="field"><label>Value units</label><select id="cstUnits"><option value="db">Gain / directivity dB</option><option value="field">Field amplitude linear</option><option value="power">Power linear</option></select></div></div>
+ <div class="bgroup" style="margin:10px 0"><button class="btn small" id="importCst">↑ Import CST TXT</button><button class="btn small" id="clearCst">Clear pattern</button><button class="btn small" id="sampleCst">CST example</button></div>
+ <div class="tipmini" id="cstStatus" role="status">No CST pattern · using built-in analytical element pattern.</div>
+ <input type="file" id="cstFile" accept=".txt,.csv,.dat,.ffe,.ffs,text/plain" hidden>
+ </div>
+ <div class="sect" id="subarraySettings"><div class="sechead">RF PORT / SUBARRAY <span class="badge" id="portBadge">1 element/port</span></div>
+ <div class="tipmini">Chia mảng thành các khối liên tiếp. Mỗi RF port cấp một subarray có <b>Sub X × Sub Y</b> phần tử, dùng chung weight và phase cấp RF. Các phần tử nội bộ có cấu hình riêng trong mẫu subarray bên dưới.</div>
+ <div class="row2"><div class="field"><label for="subX">Elements / port · horizontal</label><input type="number" id="subX" min="1" max="64" value="1"></div><div class="field"><label for="subY">Elements / port · vertical</label><input type="number" id="subY" min="1" max="64" value="1"></div></div>
+ <div class="tipmini" id="subRule">Nx và Ny phải chia hết cho số phần tử mỗi subarray.</div>
+ <div class="bgroup" style="margin-top:10px"><button class="btn small active" id="example8x8sub">Example 8 × 8 · subarray 1 × 4</button><button class="btn small" id="applySubConfig">Apply subarray grouping</button></div></div>
+<div class="sect"><div class="sechead">Feeding coefficients</div><div class="field"><label for="ampPreset">Magnitude taper</label><select id="ampPreset"><option value="uniform">Uniform</option><option value="hamming">Hamming</option><option value="hann">Hann</option><option value="binomial">Binomial</option><option value="custom">Custom</option></select></div><div class="field"><label for="ampMode">Magnitude type</label><select id="ampMode"><option value="power">Power</option><option value="voltage">Voltage / field</option></select></div><div class="field"><label for="phasePreset">Phase distribution</label><select id="phasePreset"><option value="custom">Custom</option><option value="uniform">Uniform (0°)</option><option value="progressive">Progressive</option><option value="pairs">Pairwise 180°</option><option value="steer">Beam steering</option></select></div><div class="field"><label for="phaseStep">Phase step (deg)</label><input id="phaseStep" type="number" value="0" step="10"></div><div class="row2"><div class="field"><label for="steerAz">Steer azimuth (°)</label><input id="steerAz" type="number" value="0" min="-89" max="89" step="1"></div><div class="field"><label for="steerEl">Steer elevation (°)</label><input id="steerEl" type="number" value="0" min="-89" max="89" step="1"></div></div><button class="btn" id="applyPreset" style="width:100%;margin-top:7px">Apply taper / phase presets</button></div>
+<div class="sect"><div class="sechead">Comparison traces</div><div class="trace-choice"><button class="tracebtn active has" data-trace="0" style="--trace:#2967eb"><span class="circle"></span>Trace 1</button><button class="tracebtn" data-trace="1" style="--trace:#e65b58"><span class="circle"></span>Trace 2</button><button class="tracebtn" data-trace="2" style="--trace:#16a982"><span class="circle"></span>Trace 3</button></div><div class="bgroup" style="margin-top:9px"><button class="btn small" id="clearTrace">Delete selected trace</button><button class="btn small" id="clearAll">Clear all traces</button></div><div class="readme" style="margin-top:9px">Chọn Trace, chỉnh cấu hình rồi nhấn Calculate để lưu đường bức xạ tại vị trí đó. 3D hiển thị Trace đang chọn.</div></div>
+<div class="sect"><div class="sechead">Calculate</div><button class="btn primary" id="calc" style="width:100%;padding:13px;font-size:14px">⚡ CALCULATE ARRAY FACTOR</button><div class="readme" id="accuracyNote" style="margin-top:9px">Theoretical AF · no mutual coupling or embedded element pattern.</div></div>
+<div class="sect"><div class="sechead">Beam peaks (selected trace)</div><div class="detail-list" id="peaksList"><div class="peakitem">Not calculated yet</div></div></div>
+</aside></div>
+
+<div class="footer">CST Import: đọc bảng ASCII Theta/Phi (độ), dữ liệu gain dB hoặc trường Eθ/Eφ; pattern được chuẩn hóa theo cực đại trước khi nhân với AF. CST theta = góc so với +Z, phi = góc trong mặt X–Y tính từ +X. Không hỗ trợ trực tiếp .ffs binary, CST multi-element embedded pattern hoặc phân cực/vector coupling. Phân tích HPBW là lát cắt qua cực đại và đường đồng mức −3 dB. Conventions: +Z = array broadside; X = horizontal aperture; Y = vertical aperture. Azimuth measured from +Z toward +X; elevation from XZ plane toward +Y. Directivity integrates radiation over the whole sphere; gain offset is reported separately. HPBW is defined by contiguous −3 dB crossings around a selected local maximum, and may be undefined for broad / conical beams. V4: shared RF-port weights × local-element subarray template; Z offsets supported in full per-element field sum. Single offline HTML, no external library.</div>
+</main>
+<script>
+'use strict';
+/* Antenna Array Studio – standalone browser-based array-factor calculator.
+   Uses no external dependencies. Electric-field AF: sum_i a_i exp(j (phi_i + k dot(r_i,u))).
+   Angle convention u=(cos(el)sin(az), sin(el), cos(el)cos(az)).
+   Full-sphere integration: D=4pi Umax / integral(U dOmega). */
+const $=id=>document.getElementById(id), RAD=Math.PI/180, C0=299792458;
+const colors=['#2967eb','#e65b58','#16a982'];
+const state={elements:[],traces:[null,null,null],current:0,view:'cart',camera:{yaw:-1.05,pitch:.36,zoom:1},last:null,renderTime:0};
+function nVal(id,def=0){let x=Number($(id).value);return Number.isFinite(x)?x:def}
+function clamp(x,a,b){return Math.max(a,Math.min(b,x))}
+function el(id,value){$(id).textContent=value}
+function errText(msg){el('calcStatus',msg)}
+function getControls(){
+ let type=$('arrayType').value,nx=clamp(Math.round(nVal('nx',8)),1,64),ny=clamp(Math.round(nVal('ny',4)),1,64);
+ let n=type==='linear'?clamp(Math.round(nVal('count',24)),2,4096):nx*ny;
+ if(type==='linear'){nx=n;ny=1;}
+ let sx=clamp(Math.round(nVal('subX',1)),1,nx),sy=type==='linear'?1:clamp(Math.round(nVal('subY',1)),1,ny);
+ if(n>4096)throw Error('Tối đa 4096 phần tử vật lý.');
+ if(nx%sx||ny%sy)throw Error(`Subarray ${sx}×${sy} không chia hết mảng ${nx}×${ny}. Chọn ước số phù hợp của Nx và Ny.`);
+ return {type,n,nx,ny,subX:sx,subY:sy,portNx:nx/sx,portNy:ny/sy,
+ freq:clamp(nVal('freq',4800),1,100000),dx:clamp(nVal('dx',38),.01,10000),dy:clamp(nVal('dy',38),.01,10000),
+ elem:$('elementPattern').value,gain:nVal('gain',0),mode:$('ampMode').value,cstRole:$('cstRole').value,
+ ampPreset:$('ampPreset').value,phasePreset:$('phasePreset').value,phaseStep:nVal('phaseStep',0),steerAz:nVal('steerAz',0),steerEl:nVal('steerEl',0)};
+}
+function makeElements(cfg,keep=false){let old=state.elements, arr=[];for(let i=0;i<cfg.n;i++){let col=cfg.type==='linear'?i:i%cfg.nx,row=cfg.type==='linear'?0:Math.floor(i/cfg.nx);arr.push({amp:keep&&old[i]?old[i].amp:1,phase:keep&&old[i]?old[i].phase:0,x:keep&&old[i]?old[i].x:col*cfg.dx,y:keep&&old[i]?old[i].y:row*cfg.dy,z:keep&&old[i]&&Number.isFinite(old[i].z)?old[i].z:0});}state.elements=arr;}
+function makeExample(){
+ state.editPage=0;state.activeElement=0;state.mapView={zoom:1,panX:0,panY:0};
+ $('arrayType').value='linear';$('freq').value=4800;$('count').value=24;$('subX').value=1;$('subY').value=1;
+ $('dx').value=38;$('dy').value=38;$('elementPattern').value='cos2';$('gain').value=0;$('ampMode').value='power';
+ $('ampPreset').value='uniform';$('phasePreset').value='custom';$('phaseStep').value=0;$('steerAz').value=0;$('steerEl').value=0;
+ let cfg=getControls();initPortSystem(cfg);for(let i=0;i<state.sub.ports.length;i++)state.sub.ports[i].phase=180*Math.floor(i/6);
+ syncElements();refreshPanels();makeTables();
+}
+function geometryChanged(){
+ try{
+  if($('arrayType').value==='linear'){$('subY').value=1;let n=clamp(Math.round(nVal('count',24)),2,4096);if(n%nVal('subX',1))$('subX').value=1;}
+  else {let nx=clamp(Math.round(nVal('nx',8)),1,64),ny=clamp(Math.round(nVal('ny',4)),1,64);if(nx%nVal('subX',1))$('subX').value=1;if(ny%nVal('subY',1))$('subY').value=1;}
+  let cfg=getControls();initPortSystem(cfg);state.activeElement=0;state.mapView={zoom:1,panX:0,panY:0};sizeMapStage();
+  if(cfg.type==='planar'){$('phasePreset').value='steer';$('steerAz').value=12;$('steerEl').value=8;applyPresets(false,true);}else {$('phasePreset').value='uniform';applyPresets(false,true);}
+  refreshPanels();makeTables();
+ }catch(e){errText(e.message);}
+}
+function spacingChanged(){
+ try{let cfg=getControls(),sub=state.sub;resetMapView();
+  sub.ports.forEach((p,i)=>{p.x=(i%cfg.portNx)*cfg.subX*cfg.dx;p.y=Math.floor(i/cfg.portNx)*cfg.subY*cfg.dy;});
+  sub.template.forEach((t,i)=>{t.x=(i%cfg.subX)*cfg.dx;t.y=Math.floor(i/cfg.subX)*cfg.dy;});
+  if(cfg.phasePreset==='steer')applyPresets(false,true);syncElements();makeTables();
+ }catch(e){errText(e.message);}
+}
+function binomialTap(n,i){let logFact=m=>{let v=0;for(let k=2;k<=m;k++)v+=Math.log(k);return v};return Math.exp(logFact(n-1)-logFact(i)-logFact(n-1-i));}
+function windowAt(p,t){return p==='hamming'?.54-.46*Math.cos(2*Math.PI*t):p==='hann'?.5-.5*Math.cos(2*Math.PI*t):1}
+function applyPresets(rebuild=true,skipMag=false){
+ let cfg=getControls(),a=state.sub.ports;if(!a.length){initPortSystem(cfg);a=state.sub.ports;}
+ if(!skipMag&&cfg.ampPreset!=='custom'){
+  let w=[],max=0;for(let i=0;i<a.length;i++){let r=Math.floor(i/cfg.portNx),c=i%cfg.portNx,v;
+    if(cfg.ampPreset==='binomial')v=binomialTap(cfg.portNx,c)*binomialTap(cfg.portNy,r);
+    else v=windowAt(cfg.ampPreset,c/Math.max(1,cfg.portNx-1))*windowAt(cfg.ampPreset,r/Math.max(1,cfg.portNy-1));
+    w.push(v);max=Math.max(max,v);
+  }for(let i=0;i<a.length;i++){let v=w[i]/(max||1);a[i].amp=cfg.mode==='power'?v*v:v;}
+ }
+ if(cfg.phasePreset!=='custom'){
+  let k=2*Math.PI*(cfg.freq*1e6)/C0,az=cfg.steerAz*RAD,elev=cfg.steerEl*RAD,ux=Math.cos(elev)*Math.sin(az),uy=Math.sin(elev);
+  a.forEach((p,i)=>{let v=0;if(cfg.phasePreset==='progressive')v=i*cfg.phaseStep;
+     else if(cfg.phasePreset==='pairs')v=180*Math.floor(i/2);
+     else if(cfg.phasePreset==='steer')v=-k*(p.x*ux+p.y*uy+p.z*Math.cos(elev)*Math.cos(az))*.001/RAD;
+     p.phase=Math.round(v*1000)/1000;});
+ }
+ syncElements();if(rebuild)makeTables();
+}
+function refreshPanels(){
+ let planar=$('arrayType').value==='planar';$('linearFields').style.display=planar?'none':'';$('planarFields').style.display=planar?'':'none';
+ $('positionYRow').style.display='none';el('geometryBadge',planar?'URA':'ULA');el('magnitudeType',$('ampMode').value==='power'?'Power':'Voltage');
+ el('totalElements',`${$('nx').value} × ${$('ny').value} = ${Number($('nx').value)*Number($('ny').value)} physical elements`);
+ let cfg;try{cfg=getControls();}catch(e){el('subRule',e.message);return;}
+ el('subRule',`${cfg.n} elements = ${cfg.portNx} port columns × ${cfg.portNy} port rows × ${cfg.subX}×${cfg.subY} elements/port`);
+ el('portBadge',`${cfg.portNx*cfg.portNy} RF ports`);
+}
+function tableHTML(field){
+ let a=state.elements,start=state.editPage*state.editPageSize,end=Math.min(a.length,start+state.editPageSize),cfg=getControls();
+ let s='<table class="coeff"><thead><tr>';
+ for(let i=start;i<end;i++){
+  let row=cfg.type==='planar'?Math.floor(i/cfg.nx)+1:1,col=cfg.type==='planar'?i%cfg.nx+1:i+1;
+  s+=`<th title="Row ${row}, Col ${col}">#${i+1}</th>`;
+ }
+ s+='</tr></thead><tbody><tr>';
+ for(let i=start;i<end;i++)s+=`<td><input type="number" data-field="${field}" data-index="${i}" step="any" value="${Number(a[i][field].toFixed(5))}" aria-label="${field} element ${i+1}"></td>`;
+ return s+'</tr></tbody></table>';
+}
+function updateEditorPager(){let total=Math.max(1,Math.ceil(state.elements.length/state.editPageSize));state.editPage=clamp(state.editPage,0,total-1);
+ let st=state.editPage*state.editPageSize+1,en=Math.min(state.elements.length,(state.editPage+1)*state.editPageSize);
+ el('editPageStatus',`Elements ${st.toLocaleString('vi-VN')}–${en.toLocaleString('vi-VN')} / ${state.elements.length.toLocaleString('vi-VN')}`);
+ $('editPageNumber').value=state.editPage+1;$('editPageNumber').max=total;el('editPageTotal',`/ ${total}`);
+ $('pagePrev').disabled=state.editPage===0;$('pageNext').disabled=state.editPage>=total-1;
+}
+function makeTables(){
+ refreshPanels();renderPortRows();renderTemplateEditor();updatePortStats();drawArrayMap();
+}
+for(let id of ['amplitudeTable','phaseTable','posXTable','posYTable']){$(id).addEventListener('change',e=>{let inp=e.target;if(!inp.matches('input'))return;let i=Number(inp.dataset.index),field=inp.dataset.field,value=Number(inp.value);if(!Number.isFinite(value))return;if(field==='amp'){value=Math.max(0,value);$('ampPreset').value='custom';}if(field==='phase')$('phasePreset').value='custom';state.elements[i][field]=value;inp.value=value;inp.classList.add('edited');drawArrayMap();});}
+function prepare(cfg,elements){
+ let k=2*Math.PI*cfg.freq*1e6/C0,ex=new Float64Array(elements.length),ey=new Float64Array(elements.length),ez=new Float64Array(elements.length),ar=new Float64Array(elements.length),ai=new Float64Array(elements.length),a=elements;
+ for(let i=0;i<a.length;i++){
+  let phase=a[i].phase*RAD,amp=Math.max(0,a[i].amp);if(cfg.mode==='power')amp=Math.sqrt(amp);
+  ar[i]=amp*Math.cos(phase);ai[i]=amp*Math.sin(phase);ex[i]=k*a[i].x*.001;ey[i]=k*a[i].y*.001;ez[i]=k*(a[i].z||0)*.001;
+ }
+ if(cfg.elem==='cst'&&!state.cstPattern)throw Error('Bạn chọn CST pattern nhưng chưa import file. Hãy import CST TXT trước khi Calculate.');
+ let nx=cfg.type==='planar'?cfg.nx:cfg.n,ny=cfg.type==='planar'?cfg.ny:1,regular=null;
+ let x0=a[0].x,y0=a[0].y,z0=a[0].z||0,ok=true;
+ for(let i=0;i<a.length;i++){
+  let col=i%nx,row=Math.floor(i/nx);
+  if(Math.abs(a[i].x-(x0+col*cfg.dx))>1e-5||Math.abs(a[i].y-(y0+row*cfg.dy))>1e-5||Math.abs((a[i].z||0)-z0)>1e-5){ok=false;break;}
+ }
+ if(ok){
+  regular={nx,ny,stepX:k*cfg.dx*.001,stepY:k*cfg.dy*.001};
+  // Rank-one decomposition: a 64x64 separable aperture is O(64+64), not O(4096), per look direction.
+  // For nonseparable imported weights, exact row/column synthesis still avoids 4096 trigonometric evaluations.
+  let pivot=0,max=0;for(let i=0;i<ar.length;i++){let a2=ar[i]*ar[i]+ai[i]*ai[i];if(a2>max){max=a2;pivot=i;}}
+  if(max>1e-25){
+   let pr=Math.floor(pivot/nx),pc=pivot%nx,denR=ar[pivot],denI=ai[pivot],den=max,
+       wr=new Float64Array(nx),wi=new Float64Array(nx),rr=new Float64Array(ny),ri=new Float64Array(ny);
+   for(let c=0;c<nx;c++){wr[c]=ar[pr*nx+c];wi[c]=ai[pr*nx+c];}
+   for(let r=0;r<ny;r++){let i=r*nx+pc;rr[r]=(ar[i]*denR+ai[i]*denI)/den;ri[r]=(ai[i]*denR-ar[i]*denI)/den;}
+   let rankOne=true;
+   for(let r=0;r<ny&&rankOne;r++)for(let c=0;c<nx;c++){
+    let i=r*nx+c,er=rr[r]*wr[c]-ri[r]*wi[c]-ar[i],ei=rr[r]*wi[c]+ri[r]*wr[c]-ai[i];
+    if(er*er+ei*ei>2.5e-9*Math.max(1,ar[i]*ar[i]+ai[i]*ai[i])){rankOne=false;break;}
+   }
+   if(rankOne){regular.separable=true;regular.wr=wr;regular.wi=wi;regular.rr=rr;regular.ri=ri;}
+  }
+ }
+ return {k,ex,ey,ez,ar,ai,n:elements.length,elem:cfg.elem,cst:cfg.elem==='cst'?state.cstPattern:null,cstRole:cfg.cstRole,regular};
+}
+function elementFactor(uz,pattern){let q=pattern==='omni'?0:pattern==='cos1'?1:pattern==='cos2'?2:4;return q===0?1:Math.pow(Math.max(0,uz),q);}
+function fieldPowCalc(model,ux,uy,uz){
+ if(model.elem==='cst'&&model.cstRole==='total')return sampleCstPower(model.cst,ux,uy,uz);
+ let re=0,im=0,ex=model.ex,ey=model.ey,ez=model.ez,ar=model.ar,ai=model.ai,rg=model.regular;
+ if(rg){
+  let nx=rg.nx,ny=rg.ny,px=rg.stepX*ux,py=rg.stepY*uy,
+      cx=new Float64Array(nx),sx=new Float64Array(nx),cy=new Float64Array(ny),sy=new Float64Array(ny);
+  for(let c=0;c<nx;c++){let a=c*px;cx[c]=Math.cos(a);sx[c]=Math.sin(a);}
+  for(let r=0;r<ny;r++){let a=r*py;cy[r]=Math.cos(a);sy[r]=Math.sin(a);}
+  if(rg.separable){
+   let xr=0,xi=0,yr=0,yi=0;
+   for(let c=0;c<nx;c++){xr+=rg.wr[c]*cx[c]-rg.wi[c]*sx[c];xi+=rg.wr[c]*sx[c]+rg.wi[c]*cx[c];}
+   for(let r=0;r<ny;r++){yr+=rg.rr[r]*cy[r]-rg.ri[r]*sy[r];yi+=rg.rr[r]*sy[r]+rg.ri[r]*cy[r];}
+   re=xr*yr-xi*yi;im=xr*yi+xi*yr;
+  }else{
+   for(let r=0;r<ny;r++){
+    let wr=0,wi=0,base=r*nx;
+    for(let c=0;c<nx;c++){
+     let i=base+c;wr+=ar[i]*cx[c]-ai[i]*sx[c];wi+=ar[i]*sx[c]+ai[i]*cx[c];
+    }
+    re+=wr*cy[r]-wi*sy[r];im+=wr*sy[r]+wi*cy[r];
+   }
+  }
+ }else{
+  for(let i=0;i<model.n;i++){let p=ex[i]*ux+ey[i]*uy+ez[i]*uz,c=Math.cos(p),s=Math.sin(p);re+=ar[i]*c-ai[i]*s;im+=ar[i]*s+ai[i]*c;}
+ }
+ let af=re*re+im*im;
+ if(model.elem==='cst')return af*sampleCstPower(model.cst,ux,uy,uz);
+ let elem=elementFactor(uz,model.elem);return af*elem*elem;
+}
+function direction(az,elv){let a=az*RAD,e=elv*RAD;return [Math.cos(e)*Math.sin(a),Math.sin(e),Math.cos(e)*Math.cos(a)];}
+function powAng(m,az,elv){let [x,y,z]=direction(az,elv);return fieldPowCalc(m,x,y,z);}
+function db(p,pmax){return 10*Math.log10(Math.max(p/pmax,1e-12));}
+function profile(m,pmax,axis,fixed,step=.25){let pts=[],values=[];for(let v=-90;v<=90.00001;v+=step){let ang=axis==='az'?[v,fixed]:[fixed,v];pts.push(v);values.push(db(powAng(m,ang[0],ang[1]),pmax));}return {angles:pts,dbs:values,step};}
+function maxIndex(values){let ix=0;for(let i=1;i<values.length;i++)if(values[i]>values[ix])ix=i;return ix;}
+function peaks2d(curve,threshold=-18){let a=curve.dbs,angles=curve.angles,cands=[];for(let i=1;i<a.length-1;i++)if(a[i]>=a[i-1]&&a[i]>=a[i+1]&&a[i]>=threshold){let p={angle:angles[i],db:a[i],i};if(!cands.some(x=>Math.abs(x.angle-p.angle)<1.75))cands.push(p);}cands.sort((x,y)=>y.db-x.db||Math.abs(x.angle)-Math.abs(y.angle));let res=[];for(let p of cands){if(res.every(q=>Math.abs(p.angle-q.angle)>3))res.push(p);if(res.length>=8)break;}return res;}
+function nearestIdx(a,target){return clamp(Math.round((target+90)/.25),0,a.length-1);}
+function crossing(curve,center,target){let vals=curve.dbs,idx=nearestIdx(vals,center),i0=idx;while(i0>0&&vals[i0]>=target)i0--;let i1=idx;while(i1<vals.length-1&&vals[i1]>=target)i1++;
+ if(i0===0&&vals[0]>=target||i1===vals.length-1&&vals[i1]>=target)return {left:null,right:null,width:null};
+ function interp(i,j){let vi=vals[i],vj=vals[j];if(Math.abs(vi-vj)<1e-10)return curve.angles[i];return curve.angles[i]+(target-vi)*(curve.angles[j]-curve.angles[i])/(vj-vi);}let left=interp(i0,i0+1),right=interp(i1-1,i1);return {left,right,width:right-left};}
+function directivity(m){
+ // Adaptive angular quadrature: dense sampling for larger apertures, all on a background worker.
+ let big=m.n>=1024,fast=!!(m.regular&&m.regular.separable),stepsT=big?(fast?181:121):73,stepsP=big?(fast?360:240):144,
+     sum=0,peak=0,stepT=Math.PI/(stepsT-1),stepP=2*Math.PI/stepsP;
+ for(let t=0;t<stepsT;t++){
+  let th=t*stepT,st=Math.sin(th),ct=Math.cos(th),subtotal=0;
+  for(let p=0;p<stepsP;p++){let ph=p*stepP,v=fieldPowCalc(m,st*Math.cos(ph),st*Math.sin(ph),ct);subtotal+=v;if(v>peak)peak=v;}
+  sum+=subtotal*st*stepT*stepP;
+ }
+ return {d:10*Math.log10(4*Math.PI*Math.max(peak,1e-30)/Math.max(sum,1e-30)),max:peak,integral:sum};
+}
+function estimateBeamCenter(m,cfg){
+ if(cfg.phasePreset==='steer')return {az:clamp(cfg.steerAz,-85,85),el:clamp(cfg.steerEl,-85,85)};
+ let rg=m.regular;if(!rg||rg.nx<2&&rg.ny<2)return {az:0,el:0};
+ let xr=0,xi=0,yr=0,yi=0;
+ for(let r=0;r<rg.ny;r++)for(let c=0;c<rg.nx;c++){
+  let i=r*rg.nx+c;
+  if(c+1<rg.nx){let j=i+1;xr+=m.ar[j]*m.ar[i]+m.ai[j]*m.ai[i];xi+=m.ai[j]*m.ar[i]-m.ar[j]*m.ai[i];}
+  if(r+1<rg.ny){let j=i+rg.nx;yr+=m.ar[j]*m.ar[i]+m.ai[j]*m.ai[i];yi+=m.ai[j]*m.ar[i]-m.ar[j]*m.ai[i];}
+ }
+ let ux=rg.nx>1&&rg.stepX? -Math.atan2(xi,xr)/rg.stepX:0,
+     uy=rg.ny>1&&rg.stepY? -Math.atan2(yi,yr)/rg.stepY:0;
+ if(!Number.isFinite(ux)||!Number.isFinite(uy)||Math.abs(ux)>1||Math.abs(uy)>1)return {az:0,el:0};
+ let el=Math.asin(uy)/RAD,az=Math.asin(clamp(ux/Math.max(.0001,Math.cos(el*RAD)),-1,1))/RAD;
+ return {az:clamp(az,-85,85),el:clamp(el,-85,85)};
+}
+function adaptiveAxis(center,n){
+ // Complete -90..90 global coverage plus extra sub-degree sampling where the beam is steered.
+ let base=n>=512?4.5:3,fine=n>=512?.25:.5,window=n>=512?8:10,values=[];
+ for(let p=-90;p<=90.0001;p+=base)values.push(p);
+ for(let p=Math.max(-90,center-window);p<=Math.min(90,center+window)+1e-7;p+=fine)values.push(p);
+ values.push(-90,90,clamp(center,-90,90));values.sort((a,b)=>a-b);
+ return values.filter((a,i)=>i===0||a-values[i-1]>1e-6);
+}
+function build3D(m,pmax,cfg){
+ let center=estimateBeamCenter(m,cfg),azAxis=adaptiveAxis(center.az,m.n),elAxis=adaptiveAxis(center.el,m.n),naz=azAxis.length,nel=elAxis.length,
+     data=[],max=-Infinity,at={az:0,el:0,p:0};
+ for(let j=0;j<nel;j++){
+  let row=[],elv=elAxis[j];
+  for(let i=0;i<naz;i++){
+   let az=azAxis[i],p=powAng(m,az,elv),d=db(p,pmax);
+   if(p>max){max=p;at={az,el:elv,p};}
+   row.push(d);
+  }
+  data.push(row);
+ }
+ return {data,naz,nel,at,azAxis,elAxis};
+}
+function optimizePeak(m,az,elv){let best={az,el:elv,p:powAng(m,az,elv)};for(let step of [1.5,.5,.15,.04]){for(let k=0;k<20;k++){let move=false;for(let dx of [-step,0,step])for(let dy of [-step,0,step]){let x=clamp(best.az+dx,-90,90),y=clamp(best.el+dy,-90,90),p=powAng(m,x,y);if(p>best.p+1e-9){best={az:x,el:y,p};move=true;}}if(!move)break;}}return best;}
+function find3DPeaks(surf,model,pmax,main){let {data,naz,nel}=surf,res=[];for(let j=1;j<nel-1;j++)for(let i=1;i<naz-1;i++){let v=data[j][i];if(v < -19)continue;let isPeak=true;for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++)if((dy||dx)&&data[j+dy][i+dx]>v+1e-8)isPeak=false;if(isPeak){let az=surf.azAxis[i],elv=surf.elAxis[j];res.push(optimizePeak(model,az,elv));}}res.sort((a,b)=>b.p-a.p);let chosen=[{az:main.az,el:main.el,p:powAng(model,main.az,main.el)}];for(let p of res){if(chosen.every(q=>Math.hypot(p.az-q.az,p.el-q.el)>7))chosen.push(p);if(chosen.length>=6)break;}return chosen.map(p=>({...p,db:db(p.p,pmax)}));}
+function compute(){let cfg=getControls();if(cfg.n!==state.elements.length)makeElements(cfg,false);let a=state.elements.map(x=>({...x}));let model=prepare(cfg,a),int=directivity(model),pmax=int.max;
+ if(!(pmax>1e-25))throw Error('Tổng biên độ gần bằng 0. Hãy nhập ít nhất một phần tử có magnitude > 0.');
+ let surf=build3D(model,pmax,cfg),horizontal,vertical,main;
+ if(cfg.type==='linear'){let c=profile(model,pmax,'az',0),peaks=peaks2d(c,-15),chosen=peaks[0]||{angle:c.angles[maxIndex(c.dbs)]};main={az:chosen.angle,el:0};}else main={az:surf.at.az,el:surf.at.el};
+ let refined=optimizePeak(model,main.az,main.el);main={az:refined.az,el:refined.el};
+ // Normalize by the physically relevant maximum sampled with sub-degree refinement.
+ // Include the sphere integration maximum (for backward/symmetric ULA lobes).
+ pmax=Math.max(int.max,surf.at.p,refined.p);
+ let adjust=10*Math.log10(int.max/pmax);for(let row of surf.data)for(let i=0;i<row.length;i++)row[i]+=adjust;
+ horizontal=profile(model,pmax,'az',main.el);vertical=profile(model,pmax,'el',main.az);
+ let azBw=crossing(horizontal,main.az,-3),elBw=crossing(vertical,main.el,-3),peakMarkers=peaks2d(profile(model,pmax,'az',0),-15);
+ int.d=10*Math.log10(4*Math.PI*pmax/Math.max(int.integral,1e-30));let peakMarkers3D=cfg.type==='planar'?find3DPeaks(surf,model,pmax,main):peakMarkers.slice(0,5).map(p=>({az:p.angle,el:0,db:p.db}));
+ let xyx=a.map(x=>x.x),xyy=a.map(x=>x.y),width=Math.max(...xyx)-Math.min(...xyx),height=Math.max(...xyy)-Math.min(...xyy);
+ return {cfg,elements:a,model,pmax,actualD:int.d,main,azBw,elBw,horizontal,vertical,surf,peakMarkers,peakMarkers3D,width,height,created:new Date().toLocaleTimeString('vi-VN')};}
+let workerBlobUrl=null,computeWorker=null,computeCounter=0;
+function getComputeWorkerURL(){
+ if(workerBlobUrl)return workerBlobUrl;
+ // Worker uses exact same numerical routines as this HTML and runs offline; avoids freezing UI at 4096 elements.
+ let funcs=[clamp,makeElements,prepare,elementFactor,fieldPowCalc,direction,powAng,db,profile,maxIndex,peaks2d,nearestIdx,crossing,directivity,estimateBeamCenter,adaptiveAxis,build3D,optimizePeak,find3DPeaks,locate,sampleCstPower,compute];
+ let code=`'use strict';const RAD=Math.PI/180,C0=299792458;let state={elements:[],cstPattern:null};function getControls(){return state.cfg;}
+`+
+  funcs.map(fn=>fn.toString()).join('\n')+`
+self.onmessage=function(ev){try{state.cfg=ev.data.cfg;state.elements=ev.data.elements;state.cstPattern=ev.data.cst;let started=performance.now(),result=compute();self.postMessage({ok:true,result,elapsed:Math.round(performance.now()-started)});}catch(err){self.postMessage({ok:false,error:String(err&&err.message||err)});}};`;
+ workerBlobUrl=URL.createObjectURL(new Blob([code],{type:'application/javascript'}));return workerBlobUrl;
+}
+function calculate(){
+ let b=$('calc'),cfg;
+ try{cfg=getControls();if(cfg.n!==state.elements.length)makeElements(cfg,false);}
+ catch(e){errText(e.message);return;}
+ const token=++computeCounter,trace=state.current,t0=performance.now();
+ if(computeWorker){computeWorker.terminate();computeWorker=null;}
+ b.disabled=true;el('calcStatus',`Đang tính ${cfg.n.toLocaleString('vi-VN')} phần tử trên background worker...`);
+ function done(r,elapsed){if(token!==computeCounter)return;r.portConfig={ports:state.sub.ports.map(p=>({...p})),template:state.sub.template.map(t=>({...t}))};state.traces[trace]=r;state.last=r;updateMetrics();renderAll();updateTraceButtons();el('calcStatus',`✓ Trace ${trace+1}: ${r.cfg.n.toLocaleString('vi-VN')} elements / ${state.sub.ports.length} ports · compute ${Math.round(elapsed)} ms · ${r.created}`);b.disabled=false;computeWorker=null;}
+ function failed(message){if(token!==computeCounter)return;console.error(message);errText('Calculation error: '+message);b.disabled=false;computeWorker=null;alert('Calculation error: '+message);}
+ try{
+  let wk=new Worker(getComputeWorkerURL());computeWorker=wk;
+  wk.onmessage=ev=>{wk.terminate();if(ev.data.ok)done(ev.data.result,ev.data.elapsed);else failed(ev.data.error);};
+  wk.onerror=ev=>{wk.terminate();failed('Worker: '+ev.message);};
+  wk.postMessage({cfg,elements:state.elements.map(e=>({...e})),cst:state.cstPattern});
+ }catch(e){
+  // Fallback for browsers that block Blob workers; render a status first.
+  setTimeout(()=>{try{let r=compute();done(r,performance.now()-t0);}catch(err){failed(err.message);}},20);
+ }
+}
+function selected(){return state.traces[state.current]||state.last;}
+function fmtBw(x){return x.width===null?'N/A':x.width.toFixed(2)+'°';}
+function updateMetrics(){let r=selected();if(!r){for(let x of ['outD','outPeak','outAzBw','outElBw','outSize'])el(x,'—');return;}
+ el('outD',r.actualD.toFixed(2)+' dBi');el('outPeak',r.main.az.toFixed(1)+'° / '+r.main.el.toFixed(1)+'°');el('outAzBw',fmtBw(r.azBw));el('outElBw',fmtBw(r.elBw));el('outSize',r.width.toFixed(0)+' × '+r.height.toFixed(0)+' mm');el('outCount',r.cfg.n+' elements · '+(r.cfg.portNx*r.cfg.portNy)+' RF ports · '+r.cfg.freq+' MHz');document.querySelector('#outD + em').textContent=`Peak gain est.: ${(r.actualD+r.cfg.gain).toFixed(2)} dBi with offset`;el('cutDetails',state.cut==='az'?`Normalized power · Azimuth cut at El = ${r.main.el.toFixed(1)}°`:`Normalized power · Elevation cut at Az = ${r.main.az.toFixed(1)}°`);
+ let peaks=r.peakMarkers3D,html=peaks.slice(0,6).map((p,i)=>`<div class="peakitem"><span>Peak ${i+1} · Az ${p.az.toFixed(2)}° · El ${p.el.toFixed(2)}°</span><b>${p.db.toFixed(1)} dB</b></div>`).join('');$('peaksList').innerHTML=html||'<div class="peakitem">No peaks within threshold</div>';
+ if(r.cfg.type==='linear')el('physicsNote','ℹ️ ULA chỉ có khẩu độ theo X: trong không gian 3D, búp sóng có thể tạo thành một vành/nón (beam cone), không phải một pencil beam độc lập về Az và El. HPBW của lát cắt đứng có thể rất lớn hoặc N/A. Kết quả 3D cho ULA là tính toán trường thực, không giả lập khẩu độ Y.');
+ else el('physicsNote','ℹ️ URA có khẩu độ theo cả X và Y nên có khả năng tạo pencil beam 3D. Vạch cyan biểu diễn đường đồng mức công suất −3 dB; các cung đo HPBW là lát cắt qua đỉnh chính. Kết quả lý tưởng chưa xét mutual coupling và pattern đo thực.');renderCstPhysicsNote(r);drawArrayMap();}
+function updateTraceButtons(){document.querySelectorAll('.tracebtn').forEach((b,i)=>{b.classList.toggle('active',i===state.current);b.classList.toggle('has',!!state.traces[i]);});$('traceLegend').innerHTML=state.traces.map((r,i)=>r?`<span style="--trace:${colors[i]}">Trace ${i+1}${i===state.current?' (selected)':''}</span>`:'').join('');}
+function canvasSetup(canvas){let rect=canvas.getBoundingClientRect(),w=Math.max(200,rect.width),h=Math.max(170,rect.height),dpr=Math.min(window.devicePixelRatio||1,2);let tw=Math.round(w*dpr),th=Math.round(h*dpr);if(canvas.width!==tw||canvas.height!==th){canvas.width=tw;canvas.height=th;}let ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);return {ctx,w,h};}
+function line(ctx,x1,y1,x2,y2,c,width=1,dash=[]){ctx.strokeStyle=c;ctx.lineWidth=width;ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();ctx.setLineDash([]);}
+function roundRect(ctx,x,y,w,h,r,fill,stroke){ctx.beginPath();ctx.roundRect(x,y,w,h,r);if(fill){ctx.fillStyle=fill;ctx.fill();}if(stroke){ctx.strokeStyle=stroke;ctx.stroke();}}
+function draw2D(){let {ctx,w,h}=canvasSetup($('plot2d'));ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);let r=selected(),polar=state.view==='polar';if(!r){ctx.fillStyle='#789';ctx.fillText('Press CALCULATE',w/2-40,h/2);return;}if(polar){drawPolar(ctx,w,h);return;}
+ let l=49,rgt=12,t=15,b=42,pw=w-l-rgt,ph=h-t-b,axisY=d=>t+(-d)/40*ph,axisX=a=>l+(a+90)/180*pw;
+ ctx.fillStyle='#fafeff';ctx.fillRect(l,t,pw,ph);
+ for(let y=0;y>=-40;y-=5){let yy=axisY(y);line(ctx,l,yy,l+pw,yy,y%10===0?'#d4deec':'#e9edf5',y%10===0?.9:.5);ctx.fillStyle='#6e8099';ctx.font='11px Segoe UI';ctx.textAlign='right';ctx.fillText(String(y),l-7,yy+4);}
+ for(let x=-90;x<=90;x+=15){let xx=axisX(x);line(ctx,xx,t,xx,t+ph,x===0?'#9eabc2':'#e1e7f0',x===0?1.1:.7);ctx.fillStyle='#667993';ctx.textAlign='center';ctx.fillText(String(x),xx,t+ph+16);}
+ ctx.strokeStyle='#b9c7d9';ctx.lineWidth=1;ctx.strokeRect(l,t,pw,ph);ctx.font='11px Segoe UI';ctx.fillStyle='#455977';ctx.textAlign='center';ctx.fillText(state.cut==='el'?'Elevation angle (degree)':'Azimuth angle (degree)',l+pw/2,h-5);ctx.save();ctx.translate(13,t+ph/2);ctx.rotate(-Math.PI/2);ctx.fillText('Normalized Power (dB)',0,0);ctx.restore();
+ for(let i=0;i<3;i++){let tr=state.traces[i];if(!tr)continue;let vals=state.cut==='el'?tr.vertical:tr.horizontal;ctx.beginPath();ctx.strokeStyle=colors[i];ctx.lineWidth=i===state.current?2.15:1.55;for(let k=0;k<vals.angles.length;k++){let xx=axisX(vals.angles[k]),yy=axisY(clamp(vals.dbs[k],-40,0));if(k===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy);}ctx.stroke();}
+ let rr=selected();if(rr&&$('show2dBw').checked){let m=state.cut==='el'?rr.elBw:rr.azBw;if(m.width!==null){let x1=axisX(m.left),x2=axisX(m.right),y=axisY(-3);ctx.fillStyle='#16b8c21a';ctx.fillRect(x1,t,x2-x1,ph);line(ctx,x1,y,x2,y,'#079ba9',2,[5,3]);for(let x of [x1,x2]){line(ctx,x,t,x,t+ph,'#16b8c2',1.5,[4,5]);ctx.beginPath();ctx.arc(x,y,4.5,0,Math.PI*2);ctx.fillStyle='#00aab7';ctx.fill();}ctx.fillStyle='#0c8792';ctx.textAlign='center';ctx.font='bold 11px Segoe UI';ctx.fillText('HPBW '+m.width.toFixed(2)+'°',(x1+x2)/2,t+15);}}
+ if(rr&&$('show2dPeaks').checked){let pp=peaks2d(state.cut==='el'?rr.vertical:rr.horizontal,-18).slice(0,7);for(let i=0;i<pp.length;i++){let p=pp[i],x=axisX(p.angle),y=axisY(p.db);ctx.beginPath();ctx.arc(x,y,3.8,0,2*Math.PI);ctx.fillStyle='#fd971d';ctx.fill();ctx.strokeStyle='#fff';ctx.lineWidth=1.2;ctx.stroke();if(i<5){ctx.font='bold 10px Segoe UI';ctx.textAlign='center';ctx.fillStyle='#a96812';ctx.fillText(p.angle.toFixed(1)+'°',clamp(x,25,w-25),y+15);}}}
+}
+function drawPolar(ctx,w,h){let r=selected();if(!r)return;let cx=w*.5,cy=h*.52,R=Math.min(w*.4,h*.42);ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);ctx.save();ctx.translate(cx,cy);for(let j=1;j<=4;j++){ctx.beginPath();ctx.arc(0,0,R*j/4,Math.PI,2*Math.PI);ctx.strokeStyle='#d9e3f0';ctx.lineWidth=1;ctx.stroke();ctx.font='10px Segoe UI';ctx.fillStyle='#73839c';ctx.fillText((j-4)*10+' dB',-22,-R*j/4-4);}for(let a=-90;a<=90;a+=15){let th=a*RAD;line(ctx,0,0,R*Math.sin(th),-R*Math.cos(th),a===0?'#9fb2cf':'#e0e7f1');ctx.font='10px Segoe UI';ctx.textAlign='center';ctx.fillStyle='#637793';ctx.fillText(a+'°',(R+18)*Math.sin(th),-(R+15)*Math.cos(th));}
+ for(let ti=0;ti<3;ti++){let tr=state.traces[ti];if(!tr)continue;ctx.beginPath();ctx.strokeStyle=colors[ti];ctx.lineWidth=ti===state.current?2.3:1.5;(state.cut==='el'?tr.vertical:tr.horizontal).angles.forEach((a,i)=>{let angle=a*RAD,level=clamp(((state.cut==='el'?tr.vertical:tr.horizontal).dbs[i]+40)/40,0,1),rho=R*level,x=rho*Math.sin(angle),y=-rho*Math.cos(angle);if(!i)ctx.moveTo(x,y);else ctx.lineTo(x,y);});ctx.stroke();}
+ let bw=state.cut==='el'?r.elBw:r.azBw;if($('show2dBw').checked&&bw.width!==null){for(let a of [bw.left,bw.right]){let th=a*RAD,rho=R*37/40;ctx.fillStyle='#06a5b4';ctx.beginPath();ctx.arc(rho*Math.sin(th),-rho*Math.cos(th),4,0,2*Math.PI);ctx.fill();}}
+ ctx.restore();ctx.font='11px Segoe UI';ctx.textAlign='center';ctx.fillStyle='#7a8ba1';ctx.fillText(state.cut==='el'?'0° = XZ plane, 90° = +Y':'0° = broadside, 90° = +X',w/2,h-10);
+}
+// 3D canvas renderer. Mesh vertices are beam radius in spherical direction; polygons are painter-sorted.
+function radius3D(d){return .115+.885*Math.pow(Math.max(0,Math.min(1,Math.pow(10,d/10))),.29);}
+function point3D(az,elv,d){let [x,y,z]=direction(az,elv),r=radius3D(d);return {x:x*r,y:y*r,z:z*r};}
+function transform(p,w,h){let c=state.camera,ca=Math.cos(c.yaw),sa=Math.sin(c.yaw),cp=Math.cos(c.pitch),sp=Math.sin(c.pitch);
+ let x=ca*p.x+sa*p.z,z=-sa*p.x+ca*p.z,y=cp*p.y-sp*z;z=sp*p.y+cp*z;
+ let scale=Math.min(w*.49,h*.72)*c.zoom,depth=2.85-z,proj=2.85/depth;
+ return {x:w*.50+x*scale*proj,y:h*.57-y*scale*proj,depth:z};}
+function beamColor(d){let x=clamp((d+27)/27,0,1),h=224-192*Math.pow(x,.72),s=83,l=40+19*x;return `hsl(${h.toFixed(1)} ${s}% ${l.toFixed(1)}%)`;}
+function paint3D(){let {ctx,w,h}=canvasSetup($('plot3d')),r=selected();let g=ctx.createLinearGradient(0,0,0,h);g.addColorStop(0,'#0c1a2d');g.addColorStop(1,'#172b49');ctx.fillStyle=g;ctx.fillRect(0,0,w,h);
+ ctx.textAlign='left';ctx.font='11px Segoe UI';ctx.fillStyle='#a5bddc';ctx.fillText('3D BEAM | '+(r?r.cfg.freq:'—')+' MHz',16,20);
+ if(!r)return;
+ function path3D(points,c,thick=1,dash=[]){if(points.length<2)return;ctx.beginPath();ctx.setLineDash(dash);ctx.strokeStyle=c;ctx.lineWidth=thick;points.forEach((p,i)=>{let v=transform(p,w,h);if(!i)ctx.moveTo(v.x,v.y);else ctx.lineTo(v.x,v.y);});ctx.stroke();ctx.setLineDash([]);}
+ // Direction grid / wireframe for reference.
+ for(let elev of [-60,-30,0,30,60]){let a=[];for(let az=-90;az<=90;az+=6){let v=direction(az,elev);a.push({x:v[0]*.95,y:v[1]*.95,z:v[2]*.95});}path3D(a,'#40627f80',.75);}
+ for(let az of [-60,-30,0,30,60]){let a=[];for(let elev=-90;elev<=90;elev+=6){let v=direction(az,elev);a.push({x:v[0]*.95,y:v[1]*.95,z:v[2]*.95});}path3D(a,'#40627f70',.75);}
+ let origin={x:0,y:0,z:0};for(let [tip,name,col] of [[{x:1.06,y:0,z:0},'X','#eead83'],[{x:0,y:1.06,z:0},'Y','#a6f2be'],[{x:0,y:0,z:1.15},'+Z','#80c5ff']]){path3D([origin,tip],col,1.5);let pos=transform(tip,w,h);ctx.fillStyle=col;ctx.font='bold 12px Segoe UI';ctx.fillText(name,pos.x+4,pos.y-3);}
+ let mesh=r.surf.data,naz=r.surf.naz,nel=r.surf.nel,verts=[];for(let j=0;j<nel;j++){let row=[];for(let i=0;i<naz;i++){let az=r.surf.azAxis[i],elv=r.surf.elAxis[j],pt=point3D(az,elv,mesh[j][i]);row.push({...pt,...transform(pt,w,h),power:mesh[j][i]});}verts.push(row);}
+ let polygons=[];for(let j=0;j<nel-1;j++)for(let i=0;i<naz-1;i++){let a=verts[j][i],b=verts[j][i+1],c=verts[j+1][i+1],d=verts[j+1][i],level=(a.power+b.power+c.power+d.power)/4,dep=(a.depth+b.depth+c.depth+d.depth)/4;polygons.push({a,b,c,d,dep,level});}polygons.sort((a,b)=>a.dep-b.dep);
+ for(let p of polygons){ctx.fillStyle=beamColor(p.level);ctx.beginPath();ctx.moveTo(p.a.x,p.a.y);ctx.lineTo(p.b.x,p.b.y);ctx.lineTo(p.c.x,p.c.y);ctx.lineTo(p.d.x,p.d.y);ctx.closePath();ctx.fill();}
+ // 3D constant -3 dB level (marching squares in angular coordinates)
+ if($('show3dContour').checked){ctx.lineWidth=2.8;ctx.strokeStyle='#d5fbff';ctx.shadowColor='#12e3f9';ctx.shadowBlur=6;let level=-3;
+ for(let j=0;j<nel-1;j++)for(let i=0;i<naz-1;i++){let pts=[{i,j,v:mesh[j][i]},{i:i+1,j,v:mesh[j][i+1]},{i:i+1,j:j+1,v:mesh[j+1][i+1]},{i,j:j+1,v:mesh[j+1][i]}],cross=[];
+ for(let e=0;e<4;e++){let p=pts[e],q=pts[(e+1)%4];if((p.v<level)!==(q.v<level)){let t=(level-p.v)/(q.v-p.v),az=r.surf.azAxis[p.i]+(r.surf.azAxis[q.i]-r.surf.azAxis[p.i])*t,elv=r.surf.elAxis[p.j]+(r.surf.elAxis[q.j]-r.surf.elAxis[p.j])*t;cross.push(transform(point3D(az,elv,-3),w,h));}}
+ for(let t=0;t+1<cross.length;t+=2){ctx.beginPath();ctx.moveTo(cross[t].x,cross[t].y);ctx.lineTo(cross[t+1].x,cross[t+1].y);ctx.stroke();}}
+ ctx.shadowBlur=0;}
+ // HPBW cross-section arcs via az and elevation cuts through the selected peak.
+ if($('show3dBw').checked){let v=r.main;if(r.azBw.width!==null){let a=[];for(let x=r.azBw.left;x<=r.azBw.right;x+=.4)a.push(point3D(x,v.el,db(powAng(r.model,x,v.el),r.pmax)));a.push(point3D(r.azBw.right,v.el,-3));path3D(a,'#ffec6f',3,[5,3]);for(let x of [r.azBw.left,r.azBw.right]){let p=transform(point3D(x,v.el,-3),w,h);ctx.fillStyle='#ffeb70';ctx.beginPath();ctx.arc(p.x,p.y,4,0,2*Math.PI);ctx.fill();}}
+ if(r.elBw.width!==null){let a=[];for(let y=r.elBw.left;y<=r.elBw.right;y+=.4)a.push(point3D(v.az,y,db(powAng(r.model,v.az,y),r.pmax)));a.push(point3D(v.az,r.elBw.right,-3));path3D(a,'#fb91db',3,[4,3]);for(let y of [r.elBw.left,r.elBw.right]){let p=transform(point3D(v.az,y,-3),w,h);ctx.fillStyle='#fb91db';ctx.beginPath();ctx.arc(p.x,p.y,4,0,2*Math.PI);ctx.fill();}}}
+ // Local beam maxima markers on horizontal slice. In linear arrays, maxima form conical ridges.
+ if($('show3dPeaks').checked){let markers=r.peakMarkers3D.slice(0,4);
+ markers.forEach((m,i)=>{let p=transform(point3D(m.az,m.el,m.db),w,h);ctx.beginPath();ctx.arc(p.x,p.y,6,0,Math.PI*2);ctx.fillStyle=i===0?'#ffce58':'#ff9955';ctx.fill();ctx.strokeStyle='#07172f';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#fff';ctx.font='bold 10px Segoe UI';ctx.textAlign='left';ctx.fillText(`P${i+1}${i===0?' MAIN':''}`,clamp(p.x+9,4,w-65),clamp(p.y-7,24,h-5));});}
+ // Legend gradient and HPBW label
+ let gx=w-116,gy=h-38,gw=98;let grad=ctx.createLinearGradient(gx,0,gx+gw,0);for(let p=0;p<=1;p+=.1)grad.addColorStop(p,beamColor(-27+27*p));ctx.fillStyle=grad;ctx.fillRect(gx,gy,gw,7);ctx.font='10px Segoe UI';ctx.fillStyle='#b5c6e0';ctx.fillText('−27 dB',gx,gy+20);ctx.fillText('0 dB',gx+73,gy+20);ctx.textAlign='left';ctx.fillStyle='#f7dfa2';ctx.fillText('AZ HPBW: '+fmtBw(r.azBw),13,h-23);ctx.fillStyle='#ffb7ed';ctx.fillText('EL HPBW: '+fmtBw(r.elBw),13,h-8);
+}
+function renderAll(){draw2D();paint3D();}
+function download(name,text,mime){let blob=new Blob([text],{type:mime||'text/plain;charset=utf-8'}),url=URL.createObjectURL(blob),link=document.createElement('a');link.href=url;link.download=name;document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),5000);}
+function exportCSV(){let r=selected();if(!r){alert('Please calculate first');return;}let rows=[['Azimuth_deg','Power_dB','Linear_power_relative'].join(',')];for(let i=0;i<r.horizontal.angles.length;i++){let dbv=r.horizontal.dbs[i];rows.push([r.horizontal.angles[i].toFixed(3),dbv.toFixed(6),Math.pow(10,dbv/10).toFixed(9)].join(','));}download(`array_horizontal_${r.cfg.freq}MHz.csv`,rows.join('\n'),'text/csv;charset=utf-8');}
+function export3D(){let r=selected();if(!r)return;let a=['Azimuth_deg,Elevation_deg,Normalized_power_dB'];for(let j=0;j<r.surf.nel;j++)for(let i=0;i<r.surf.naz;i++){a.push(r.surf.azAxis[i].toFixed(3)+','+r.surf.elAxis[j].toFixed(3)+','+r.surf.data[j][i].toFixed(5));}download('beam_3D_'+r.cfg.freq+'MHz.csv',a.join('\n'),'text/csv;charset=utf-8');}
+function saveJSON(){let cfg={...getControls(),elements:state.elements.map(e=>({...e})),subarray:{ports:state.sub.ports,template:state.sub.template},cstPattern:state.cstPattern};download('antenna_array_subarray_3D_configuration.json',JSON.stringify(cfg,null,2),'application/json');}
+function loadJSON(file){let fr=new FileReader();fr.onload=()=>{try{
+ let o=JSON.parse(fr.result);if(!o||!Array.isArray(o.elements)||!['linear','planar'].includes(o.type))throw Error('Invalid antenna config');
+ for(let [id,key] of [['arrayType','type'],['freq','freq'],['count','n'],['nx','nx'],['ny','ny'],['dx','dx'],['dy','dy'],['elementPattern','elem'],['gain','gain'],['ampMode','mode'],['ampPreset','ampPreset'],['phasePreset','phasePreset'],['cstRole','cstRole'],['phaseStep','phaseStep'],['steerAz','steerAz'],['steerEl','steerEl'],['subX','subX'],['subY','subY']])if(o[key]!==undefined)$(id).value=o[key];
+ if(!o.subarray){$('subX').value=1;$('subY').value=1;}
+ let cfg=getControls();if(o.elements.length!==cfg.n)throw Error('Element count mismatch');
+ initPortSystem(cfg);
+ if(o.subarray&&Array.isArray(o.subarray.ports)&&Array.isArray(o.subarray.template)){
+  if(o.subarray.ports.length!==state.sub.ports.length||o.subarray.template.length!==state.sub.template.length)throw Error('Subarray port/template count mismatch');
+  state.sub.ports=o.subarray.ports.map(p=>({...p}));state.sub.template=o.subarray.template.map(t=>({...t}));syncElements();
+ }else{
+  state.elements=o.elements.map(e=>({amp:Number(e.amp)||0,phase:Number(e.phase)||0,x:Number(e.x)||0,y:Number(e.y)||0,z:Number(e.z)||0}));derivePortsFromElements();
+ }
+ state.cstPattern=o.cstPattern||null;updateCstSummary();refreshPanels();makeTables();calculate();
+ }catch(e){alert('Could not load JSON: '+e.message);}};fr.readAsText(file);}
+function setTrace(index){state.current=index;let r=state.traces[index];if(r){
+ let c=r.cfg;for(let [id,k] of [['arrayType','type'],['freq','freq'],['count','n'],['nx','nx'],['ny','ny'],['dx','dx'],['dy','dy'],['elementPattern','elem'],['gain','gain'],['ampMode','mode'],['ampPreset','ampPreset'],['phasePreset','phasePreset'],['cstRole','cstRole'],['phaseStep','phaseStep'],['steerAz','steerAz'],['steerEl','steerEl'],['subX','subX'],['subY','subY']])if(c[k]!==undefined)$(id).value=c[k];
+ initPortSystem(getControls());if(r.portConfig){state.sub.ports=r.portConfig.ports.map(p=>({...p}));state.sub.template=r.portConfig.template.map(t=>({...t}));syncElements();}
+ else{state.elements=r.elements.map(e=>({...e}));derivePortsFromElements();}
+ if(c.elem==='cst')state.cstPattern=r.model.cst;updateCstSummary();refreshPanels();makeTables();state.last=r;
+ }else state.last=state.traces.find(Boolean)||null;updateTraceButtons();updateMetrics();renderAll();}
+
+// ========== V4 PORT / SUBARRAY HIERARCHY ==========
+state.sub={ports:[],template:[],firstRow:0,rowsShown:2,selectedPort:0};
+function initPortSystem(cfg){
+ let sx=cfg.subX,sy=cfg.subY,ports=[],template=[];
+ for(let r=0;r<cfg.portNy;r++)for(let c=0;c<cfg.portNx;c++)ports.push({amp:1,phase:0,x:c*sx*cfg.dx,y:r*sy*cfg.dy,z:0});
+ for(let lr=0;lr<sy;lr++)for(let lc=0;lc<sx;lc++)template.push({amp:1,phase:0,x:lc*cfg.dx,y:lr*cfg.dy,z:0});
+ state.sub={ports,template,firstRow:0,rowsShown:state.sub?.rowsShown||2,selectedPort:0};syncElements();
+}
+function portForElement(i,cfg){let row=Math.floor(i/cfg.nx),col=i%cfg.nx;return Math.floor(row/cfg.subY)*cfg.portNx+Math.floor(col/cfg.subX);}
+function localForElement(i,cfg){let row=Math.floor(i/cfg.nx),col=i%cfg.nx;return (row%cfg.subY)*cfg.subX+(col%cfg.subX);}
+function syncElements(){
+ let cfg=getControls(),sub=state.sub,elems=new Array(cfg.n);
+ if(sub.ports.length!==cfg.portNx*cfg.portNy||sub.template.length!==cfg.subX*cfg.subY)throw Error('Port/template dimensions do not match Nx×Ny');
+ for(let i=0;i<cfg.n;i++){
+  let p=sub.ports[portForElement(i,cfg)],t=sub.template[localForElement(i,cfg)];
+  elems[i]={amp:p.amp*t.amp,phase:p.phase+t.phase,x:p.x+t.x,y:p.y+t.y,z:(p.z||0)+(t.z||0)};
+ }
+ state.elements=elems;
+}
+function derivePortsFromElements(){
+ let cfg=getControls();if(cfg.subX!==1||cfg.subY!==1)throw Error('Legacy element file requires 1×1 subarray');
+ state.sub.template=[{amp:1,phase:0,x:0,y:0,z:0}];
+ state.sub.ports=state.elements.map(e=>({...e}));state.sub.firstRow=0;state.sub.selectedPort=0;
+}
+function showPortRow(pr){let st=state.sub;st.firstRow=clamp(pr,0,getControls().portNy-st.rowsShown);makeTables();}
+function updatePortStats(){let cfg=getControls(),ports=cfg.portNx*cfg.portNy,total=cfg.n;
+ $('portStats').innerHTML=[['PHYSICAL ELEMENTS',`${cfg.nx} × ${cfg.ny} = ${total}`],['ONE SUBARRAY',`${cfg.subX} × ${cfg.subY} = ${cfg.subX*cfg.subY}`],['RF PORT GRID',`${cfg.portNx} × ${cfg.portNy} = ${ports}`]].map(([label,val])=>`<div class="sub-stat"><small>${label}</small><strong>${val}</strong></div>`).join('');
+ $('subTemplateInfo').textContent=`Một port cấp ${cfg.subX} cột × ${cfg.subY} hàng phần tử (row 1 ở dưới). Chỉnh hệ số nội bộ và vị trí tương đối (offset) trong bảng mẫu, sau đó áp dụng tự động cho tất cả ${ports} port.`;
+}
+function renderPortRows(){let cfg=getControls(),sub=state.sub,first=clamp(sub.firstRow,0,Math.max(0,cfg.portNy-sub.rowsShown));sub.firstRow=first;
+ $('portFirstRow').value=first+1;$('portFirstRow').max=cfg.portNy;$('portRowsShown').value=sub.rowsShown;
+ el('portRowInfo',`Rows ${first+1}–${Math.min(cfg.portNy,first+sub.rowsShown)} / ${cfg.portNy}`);
+ $('portPrev').disabled=first===0;$('portNext').disabled=first+sub.rowsShown>=cfg.portNy;
+ let html='';for(let pr=first;pr<Math.min(first+sub.rowsShown,cfg.portNy);pr++){
+  html+=`<section class="port-row"><div class="port-row-title"><span>RF PORT ROW ${pr+1} <small>· physical element rows ${pr*cfg.subY+1}–${(pr+1)*cfg.subY} (bottom-up)</small></span><span>${cfg.portNx} ports / row</span></div>`;
+  html+='<div class="port-scroller"><table class="port-table"><thead><tr><th class="side">Parameter</th>';
+  for(let pc=0;pc<cfg.portNx;pc++){let i=pr*cfg.portNx+pc;html+=`<th class="${i===sub.selectedPort?'port-selected':''}">Port ${i+1}<br><small>C${pc+1}</small></th>`;}
+  html+='</tr></thead><tbody>';
+  for(let [f,label] of [['amp',`Weight (${cfg.mode})`],['phase','Phase (deg)'],['x','Anchor X (mm)'],['y','Anchor Y (mm)'],['z','Anchor Z (mm)']]){
+   html+=`<tr><th class="side">${label}</th>`;
+   for(let pc=0;pc<cfg.portNx;pc++){let i=pr*cfg.portNx+pc,p=sub.ports[i];html+=`<td class="${i===sub.selectedPort?'port-selected':''}"><input type="number" step="any" data-port="${i}" data-field="${f}" value="${Number((p[f]||0).toFixed(6))}" aria-label="Port ${i+1} ${f}"></td>`;}
+   html+='</tr>';
+  }html+='</tbody></table></div></section>';
+ }
+ $('portRowEditor').innerHTML=html;
+}
+function renderTemplateEditor(){let cfg=getControls(),t=state.sub.template;
+ let html='<table class="template-table"><thead><tr><th>Local (row,col)</th><th>Weight</th><th>Phase °</th><th>ΔX mm</th><th>ΔY mm</th><th>ΔZ mm</th></tr></thead><tbody>';
+ for(let i=0;i<t.length;i++){let lr=Math.floor(i/cfg.subX),lc=i%cfg.subX,o=t[i];html+=`<tr><td><span class="internal-mark">R${lr+1} C${lc+1}</span></td>`;
+ for(let f of ['amp','phase','x','y','z'])html+=`<td><input type="number" step="any" data-local="${i}" data-field="${f}" value="${Number((o[f]||0).toFixed(6))}" aria-label="Local ${lr+1} ${lc+1} ${f}"></td>`;
+ html+='</tr>';}
+ html+='</tbody></table>';$('subTemplateEditor').innerHTML=html;
+}
+function activatePort(port){let cfg=getControls(),sub=state.sub;sub.selectedPort=clamp(port,0,sub.ports.length-1);
+ sub.firstRow=clamp(Math.floor(sub.selectedPort/cfg.portNx),0,Math.max(0,cfg.portNy-sub.rowsShown));makeTables();
+ // A subarray may contain many elements; select the lower-left physical element.
+ let pr=Math.floor(sub.selectedPort/cfg.portNx),pc=sub.selectedPort%cfg.portNx;
+ state.activeElement=pr*cfg.subY*cfg.nx+pc*cfg.subX;drawArrayMap();
+}
+function exportPortsCSV(){let cfg=getControls(),rows=[`# role=ports Nx=${cfg.nx} Ny=${cfg.ny} subX=${cfg.subX} subY=${cfg.subY}`,`# magnitude_mode=${cfg.mode}`,
+ 'port,port_row,port_col,weight,phase_deg,x_mm,y_mm,z_mm'];
+ state.sub.ports.forEach((p,i)=>rows.push([i+1,Math.floor(i/cfg.portNx)+1,i%cfg.portNx+1,p.amp,p.phase,p.x,p.y,p.z||0].join(',')));
+ download(`RF_ports_${cfg.portNx}x${cfg.portNy}_sub${cfg.subX}x${cfg.subY}.csv`,rows.join('\n').replace(/\\n/g,'\n'),'text/csv;charset=utf-8');
+}
+function exportTemplateCSV(){let cfg=getControls(),rows=[`# role=template subX=${cfg.subX} subY=${cfg.subY}`,`# magnitude_mode=${cfg.mode}`,
+ 'local_row,local_col,weight,phase_deg,dx_mm,dy_mm,dz_mm'];
+ state.sub.template.forEach((p,i)=>rows.push([Math.floor(i/cfg.subX)+1,i%cfg.subX+1,p.amp,p.phase,p.x,p.y,p.z||0].join(',')));
+ download(`subarray_template_${cfg.subX}x${cfg.subY}.csv`,rows.join('\n').replace(/\\n/g,'\n'),'text/csv;charset=utf-8');
+}
+function exportPhysicalCSV(){let cfg=getControls(),rows=[`# role=derived_element_map Nx=${cfg.nx} Ny=${cfg.ny} subX=${cfg.subX} subY=${cfg.subY}`,`# magnitude_mode=${cfg.mode}`,
+ 'element,row,col,port,port_row,port_col,local_row,local_col,weight,phase_deg,x_mm,y_mm,z_mm'];
+ state.elements.forEach((e,i)=>{let pr=Math.floor(Math.floor(i/cfg.nx)/cfg.subY),pc=Math.floor((i%cfg.nx)/cfg.subX),lr=Math.floor(i/cfg.nx)%cfg.subY,lc=(i%cfg.nx)%cfg.subX;
+  rows.push([i+1,Math.floor(i/cfg.nx)+1,i%cfg.nx+1,pr*cfg.portNx+pc+1,pr+1,pc+1,lr+1,lc+1,e.amp,e.phase,e.x,e.y,e.z||0].join(','));});
+ download('physical_array_3D_mapping_'+cfg.n+'elements.csv',rows.join('\n').replace(/\\n/g,'\n'),'text/csv;charset=utf-8');
+}
+function fileRoleMeta(comments){let s=comments.join(' '),out={};for(let key of ['Nx','Ny','subX','subY']){let m=s.match(new RegExp('\\b'+key+'\\s*=\\s*(\\d+)','i'));if(m)out[key]=Number(m[1]);}return out;}
+function importPortsCSV(text,name){let tab=readTabular(text),meta=fileRoleMeta(tab.comments);
+ // Files exported by this program include physical array and subarray dimensions for reproducible placement.
+ if(meta.Nx&&meta.Ny){$('arrayType').value=meta.Ny===1?'linear':'planar';$('nx').value=meta.Nx;$('ny').value=meta.Ny;$('count').value=meta.Nx;}
+ if(meta.subX)$('subX').value=meta.subX;if(meta.subY)$('subY').value=meta.subY;
+ let cfg=getControls(),h=tab.headers,pr=headerIndex(h,['port_row','portrow']),pc=headerIndex(h,['port_col','portcol']),pi=headerIndex(h,['port','portindex']),
+ ca=headerIndex(h,['weight','magnitude','amp']),cp=headerIndex(h,['phase_deg','phase']),cx=headerIndex(h,['x_mm','x']),cy=headerIndex(h,['y_mm','y']),cz=headerIndex(h,['z_mm','z']);
+ if(pr<0||pc<0)throw Error('Port CSV cần port_row và port_col theo sơ đồ RF Port, không phải row/col của element.');
+ if(tab.rows.length!==cfg.portNx*cfg.portNy)throw Error(`Port CSV có ${tab.rows.length} dòng; cấu hình cần ${cfg.portNx*cfg.portNy} port. Dùng Export RF ports CSV làm mẫu.`);
+ let current=state.sub;if(current.ports.length!==tab.rows.length||current.template.length!==cfg.subX*cfg.subY){initPortSystem(cfg);current=state.sub;}
+ let next=current.ports.map(x=>({...x})),seen=new Set();
+ for(let r of tab.rows){let row=valAt(r,pr),col=valAt(r,pc);if(!Number.isInteger(row)||!Number.isInteger(col)||row<1||col<1||row>cfg.portNy||col>cfg.portNx)throw Error('port_row/col không khớp sơ đồ');
+  let i=(row-1)*cfg.portNx+col-1;if(seen.has(i))throw Error('Trùng port_row/col');seen.add(i);
+  if(pi>=0&&valAt(r,pi)!==i+1)throw Error(`Port ID không khớp row/col tại port ${i+1}`);
+  let p=next[i];for(let [f,k] of [['amp',ca],['phase',cp],['x',cx],['y',cy],['z',cz]]){let v=valAt(r,k);if(v!==null){if(f==='amp'&&v<0)throw Error('Weight không âm');p[f]=v;}}
+ }
+ if(seen.size!==next.length)throw Error('Thiếu port');
+ let m=tab.comments.join(' ').match(/magnitude_mode\s*=\s*(power|voltage)/i);if(m)$('ampMode').value=m[1].toLowerCase();
+ current.ports=next;syncElements();$('ampPreset').value='custom';$('phasePreset').value='custom';makeTables();calculate();
+ el('portImportStatus',`✓ Đã nhập ${next.length} RF ports, mapping ${cfg.portNx} × ${cfg.portNy} từ ${name}.`);
+}
+function importTemplateCSV(text,name){let tab=readTabular(text),cfg=getControls(),h=tab.headers,
+ rr=headerIndex(h,['local_row','localrow']),cc=headerIndex(h,['local_col','localcol']),ca=headerIndex(h,['weight','amp']),
+ cp=headerIndex(h,['phase_deg','phase']),cx=headerIndex(h,['dx_mm','x_mm']),cy=headerIndex(h,['dy_mm','y_mm']),cz=headerIndex(h,['dz_mm','z_mm']);
+ if(rr<0||cc<0)throw Error('Template CSV cần local_row / local_col');
+ if(tab.rows.length!==cfg.subX*cfg.subY)throw Error(`Template cần ${cfg.subX*cfg.subY} phần tử`);
+ let next=state.sub.template.map(t=>({...t})),seen=new Set();
+ for(let r of tab.rows){let row=valAt(r,rr),col=valAt(r,cc);if(!Number.isInteger(row)||!Number.isInteger(col)||row<1||col<1||row>cfg.subY||col>cfg.subX)throw Error('Local row/col ngoài subarray');
+  let i=(row-1)*cfg.subX+col-1;if(seen.has(i))throw Error('Trùng local row/col');seen.add(i);let t=next[i];
+  for(let [f,k] of [['amp',ca],['phase',cp],['x',cx],['y',cy],['z',cz]]){let v=valAt(r,k);if(v!==null){if(f==='amp'&&v<0)throw Error('Weight không âm');t[f]=v;}}
+ }
+ state.sub.template=next;syncElements();makeTables();calculate();el('portImportStatus',`✓ Import subarray template ${cfg.subX}×${cfg.subY} từ ${name}; đã scale lên ${state.sub.ports.length} ports.`);
+}
+
+function importPhysicalCSV(text,name){
+ let tab=readTabular(text),meta=fileRoleMeta(tab.comments);
+ if(!meta.Nx||!meta.Ny||!meta.subX||!meta.subY)throw Error('Element CSV cần metadata # role=derived_element_map Nx=... Ny=... subX=... subY=... như file Export full 3D.');
+ if(meta.Nx*meta.Ny>4096||meta.Nx>64||meta.Ny>64)throw Error('Array vượt 64×64');
+ $('arrayType').value=meta.Ny===1?'linear':'planar';$('nx').value=meta.Nx;$('ny').value=meta.Ny;
+ $('count').value=meta.Nx;$('subX').value=meta.subX;$('subY').value=meta.subY;
+ let cfg=getControls(),h=tab.headers,
+  cr=headerIndex(h,['row']),cc=headerIndex(h,['col']),
+  ci=headerIndex(h,['element']),cpr=headerIndex(h,['port_row']),cpc=headerIndex(h,['port_col']),cpid=headerIndex(h,['port']),
+  ca=headerIndex(h,['weight']),cf=headerIndex(h,['phase_deg']),cx=headerIndex(h,['x_mm']),cy=headerIndex(h,['y_mm']),cz=headerIndex(h,['z_mm']);
+ if(cr<0||cc<0||ca<0||cf<0||cx<0||cy<0)throw Error('CSV cần row,col,weight,phase_deg,x_mm,y_mm; z_mm có thể bỏ qua.');
+ if(tab.rows.length!==cfg.n)throw Error(`Cấu hình ${cfg.n} elements nhưng CSV có ${tab.rows.length} dòng.`);
+ let elems=new Array(cfg.n);
+ for(let r of tab.rows){let row=valAt(r,cr),col=valAt(r,cc);
+  if(!Number.isInteger(row)||!Number.isInteger(col)||row<1||row>cfg.ny||col<1||col>cfg.nx)throw Error('Invalid physical row/column');
+  let i=(row-1)*cfg.nx+(col-1);if(elems[i])throw Error('Trùng element row/col');
+  if(ci>=0&&valAt(r,ci)!==i+1)throw Error('Element ID không khớp tọa độ row/col');
+  let pr=Math.floor((row-1)/cfg.subY)+1,pc=Math.floor((col-1)/cfg.subX)+1,port=(pr-1)*cfg.portNx+pc;
+  if(cpr>=0&&valAt(r,cpr)!==pr||cpc>=0&&valAt(r,cpc)!==pc||cpid>=0&&valAt(r,cpid)!==port)throw Error('Port mapping mâu thuẫn element row/col');
+  let amp=valAt(r,ca),phase=valAt(r,cf),x=valAt(r,cx),y=valAt(r,cy),z=valAt(r,cz)||0;
+  if(amp===null||amp<0||phase===null||x===null||y===null)throw Error('Invalid element weight/phase/position');
+  elems[i]={amp,phase,x,y,z};
+ }
+ let m=tab.comments.join(' ').match(/magnitude_mode\s*=\s*(power|voltage)/i);if(m)$('ampMode').value=m[1].toLowerCase();
+ initPortSystem(cfg);
+ // Factor complete element data into one common element template and per-RF-port values.
+ // Set template local element (row 1, col 1) = 1∠0 at origin and use its values as each RF port anchor.
+ let elementAt=(pr,pc,lr,lc)=>elems[(pr*cfg.subY+lr)*cfg.nx+pc*cfg.subX+lc];
+ let referencePort=-1;
+ for(let port=0;port<state.sub.ports.length;port++){
+  let pr=Math.floor(port/cfg.portNx),pc=port%cfg.portNx;
+  if(elementAt(pr,pc,0,0).amp>1e-12){referencePort=port;break;}
+ }
+ if(referencePort<0)throw Error('Mọi port zero weight. Không thể khôi phục mẫu nội bộ từ file physical-only; dùng port CSV + template.');
+ let rp=Math.floor(referencePort/cfg.portNx),rc=referencePort%cfg.portNx,ref=elementAt(rp,rc,0,0);
+ for(let port=0;port<state.sub.ports.length;port++){
+  let pr=Math.floor(port/cfg.portNx),pc=port%cfg.portNx;
+  let anchor=elementAt(pr,pc,0,0);state.sub.ports[port]={amp:anchor.amp,phase:anchor.phase,x:anchor.x,y:anchor.y,z:anchor.z};
+ }
+ for(let lr=0;lr<cfg.subY;lr++)for(let lc=0;lc<cfg.subX;lc++){
+  let k=lr*cfg.subX+lc,e=elementAt(rp,rc,lr,lc);
+  state.sub.template[k]={amp:e.amp/ref.amp,phase:e.phase-ref.phase,x:e.x-ref.x,y:e.y-ref.y,z:e.z-ref.z};
+ }
+ for(let i=0;i<elems.length;i++){
+  let p=state.sub.ports[portForElement(i,cfg)],t=state.sub.template[localForElement(i,cfg)],e=elems[i];
+  let diffA=Math.abs(p.amp*t.amp-e.amp),diffP=((p.phase+t.phase-e.phase+180)%360+360)%360-180;
+  if(diffA>1e-4*Math.max(1,e.amp)||Math.abs(diffP)>0.02&&e.amp>1e-10||
+     Math.abs(p.x+t.x-e.x)>1e-3||Math.abs(p.y+t.y-e.y)>1e-3||Math.abs(p.z+t.z-e.z)>1e-3)
+    throw Error(`Element #${i+1} không factorize được thành weight_port × weight_template; dùng RF port CSV + subarray template riêng, hoặc chọn subarray 1×1.`);
+ }
+ syncElements();$('ampPreset').value='custom';$('phasePreset').value='custom';refreshPanels();makeTables();calculate();
+ el('portImportStatus',`✓ Import 3D physical mapping ${cfg.n} elements → ${cfg.portNx*cfg.portNy} RF ports × ${cfg.subX*cfg.subY} local elements (${name}).`);
+}
+function v4Example(){
+ $('arrayType').value='planar';$('nx').value=8;$('ny').value=8;$('subX').value=1;$('subY').value=4;
+ $('freq').value=4800;$('dx').value=38;$('dy').value=38;$('elementPattern').value='cos2';$('ampPreset').value='uniform';$('phasePreset').value='steer';$('steerAz').value=12;$('steerEl').value=8;
+ initPortSystem(getControls());applyPresets(false,false);state.mapView={zoom:1,panX:0,panY:0};sizeMapStage();makeTables();calculate();
+}
+// ========== END V4 PORT / SUBARRAY HIERARCHY ==========
+
+// ===== URA & CST upgrade: no third-party dependency. =====
+state.cstPattern = null;
+state.cut = 'az';
+state.activeElement = 0;
+state.mapHit = [];
+state.mapView = {zoom:1,panX:0,panY:0};
+state.editPage = 0; state.editPageSize=128;
+
+function cstInfo(msg,ok=false){
+ $('cstStatus').textContent=msg;
+ $('cstBadge').textContent=ok?'Loaded':'Not loaded';
+ $('cstBadge').style.background=ok?'#e0f6e7':'#e5f2ff';
+ $('cstBadge').style.color=ok?'#168049':'#1257a7';
+}
+function parseTextFile(file,callback){
+ const reader=new FileReader();reader.onerror=()=>alert('Không đọc được file: '+file.name);
+ reader.onload=()=>{try{callback(String(reader.result),file.name);}catch(e){console.error(e);alert('Lỗi import file '+file.name+': '+e.message);}};
+ reader.readAsText(file,'UTF-8');
+}
+function csvCells(line,delim){
+ if(delim==='whitespace')return line.trim().split(/\s+/);
+ let cells=[],cur='',q=false;
+ for(let i=0;i<line.length;i++){
+  let c=line[i];if(c==='"'){if(q&&line[i+1]==='"'){cur+='"';i++;}else q=!q;}
+  else if(c===delim&&!q){cells.push(cur.trim());cur='';}
+  else cur+=c;
+ }
+ cells.push(cur.trim());return cells;
+}
+function readTabular(text){
+ let lines=text.replace(/^\uFEFF/,'').split(/\r?\n/).map(x=>x.trim()).filter(x=>x&& !/^#/.test(x));
+ if(lines.length<2)throw Error('File phải có tiêu đề cột và ít nhất một dòng dữ liệu.');
+ let first=lines[0],delim=first.includes('\t')?'\t':first.includes(';')?';':first.includes(',')?',':'whitespace';
+ let header=csvCells(first,delim).map(s=>s.trim());
+ return {headers:header,rows:lines.slice(1).map(l=>csvCells(l,delim)),comments:text.split(/\r?\n/).filter(x=>/^\s*#/.test(x))};
+}
+function normHeader(x){return String(x).toLowerCase().replace(/[^a-z0-9]/g,'');}
+function headerIndex(h,names){let nn=h.map(normHeader);for(let name of names){let k=nn.indexOf(normHeader(name));if(k>=0)return k;}return -1;}
+function valAt(row,col){if(col<0||row[col]===undefined||String(row[col]).trim()==='')return null;let v=Number(String(row[col]).trim());if(!Number.isFinite(v))throw Error('Không phải số: '+row[col]);return v;}
+function importWeightsCSV(text,name){
+ const tbl=readTabular(text),head=tbl.headers;
+ if(headerIndex(head,['port_row','portrow'])>=0)return importPortsCSV(text,name);
+ if(headerIndex(head,['local_row','localrow'])>=0)return importTemplateCSV(text,name);
+ $('subX').value=1;$('subY').value=1;
+ let ci=headerIndex(head,['element','index','id','n','port','elementid']),
+   cr=headerIndex(head,['row','r','row1based']), cc=headerIndex(head,['col','column','c']),
+   ca=headerIndex(head,['weight','magnitude','amp','amplitude','power','voltage','feedweight']),
+   cp=headerIndex(head,['phase_deg','phase','phasedeg','phasedelay','phasedelaydeg','phaseoffset']),
+   cx=headerIndex(head,['x_mm','position_x_mm','positionx','x','distance_x_mm','distancexmm','distance_mm','distance','positionmm']),
+   cy=headerIndex(head,['y_mm','position_y_mm','positiony','y','distance_y_mm','distanceymm']);
+ if([ca,cp,cx,cy].every(x=>x<0))throw Error('Cần ít nhất một cột weight, phase_deg, x_mm hoặc y_mm.');
+ let items=tbl.rows.map((row,i)=>({row,ord:i,ind:valAt(row,ci),rr:valAt(row,cr),cc:valAt(row,cc)}));
+ if(items.length>4096)throw Error('Tối đa 4.096 phần tử trong một cấu hình.');
+ const hasGrid=cr>=0&&cc>=0, hasIndex=ci>=0;
+ let targetN=items.length, cfg=getControls();
+ if(hasGrid){
+  let rZero=items.some(a=>a.rr===0),cZero=items.some(a=>a.cc===0);
+  let maxR=Math.max(...items.map(a=>a.rr-(rZero?0:1))),maxC=Math.max(...items.map(a=>a.cc-(cZero?0:1)));
+  let ny=maxR+1,nx=maxC+1;
+  if(!Number.isInteger(nx)||!Number.isInteger(ny)||nx<1||ny<1||nx>64||ny>64||nx*ny>4096)throw Error('row / col không hợp lệ (Nx, Ny phải từ 1 đến 64; tổng ≤4.096).');
+  $('arrayType').value='planar';$('nx').value=nx;$('ny').value=ny;cfg=getControls();
+  for(let item of items){item.target=(item.rr-(rZero?0:1))*nx+(item.cc-(cZero?0:1));}
+ }else if(hasIndex){
+  let zero=items.some(a=>a.ind===0);
+  for(let item of items)item.target=item.ind-(zero?0:1);
+  if(Math.max(...items.map(a=>a.target))+1>cfg.n)throw Error('Index vượt số phần tử cấu hình. Hãy đặt Nx, Ny hoặc N trước khi import.');
+ }else{
+  if(items.length!==cfg.n){
+   if(cfg.type==='linear'&&items.length>=2&&items.length<=128){$('count').value=items.length;cfg=getControls();}
+   else throw Error(`File có ${items.length} phần tử, nhưng mảng hiện tại có ${cfg.n}. Đặt Nx × Ny phù hợp, hoặc bổ sung row/col trong CSV.`);
+  }
+  for(let item of items)item.target=item.ord;
+ }
+ if(hasGrid&&items.length!==cfg.n)throw Error(`Grid ${cfg.n} vị trí nhưng file chỉ có ${items.length} hàng. Cần đủ mọi element.`);
+ let seen=new Set();for(let a of items){if(!Number.isInteger(a.target)||a.target<0||a.target>=cfg.n||seen.has(a.target))throw Error('Trùng hoặc sai thứ tự element / row / col trong file.');seen.add(a.target);}
+ if(items.length!==cfg.n)throw Error(`CSV chỉ định ${items.length}/${cfg.n} phần tử. Cần file đầy đủ, một dòng mỗi phần tử.`);
+ makeElements(cfg,false);
+ let m=tbl.comments.join(' ').match(/magnitude_mode\s*=\s*(power|voltage)/i);
+ if(m)$('ampMode').value=m[1].toLowerCase();
+ else if(headerIndex(head,['power'])>=0)$('ampMode').value='power';
+ else if(headerIndex(head,['voltage'])>=0)$('ampMode').value='voltage';
+ for(let a of items){let e=state.elements[a.target],w=valAt(a.row,ca),p=valAt(a.row,cp),x=valAt(a.row,cx),y=valAt(a.row,cy);
+  if(w!==null){if(w<0)throw Error('Magnitude phải không âm ở element '+(a.target+1));e.amp=w;}
+  if(p!==null)e.phase=p;if(x!==null)e.x=x;if(y!==null)e.y=y; e.z=0;
+ }
+ $('ampPreset').value='custom';$('phasePreset').value='custom';derivePortsFromElements();
+ refreshPanels();makeTables();el('weightsStatus',`✓ Đã nhập ${items.length} elements từ ${name} · ${cfg.type==='planar'?cfg.nx+' × '+cfg.ny:'ULA'} · ${$('ampMode').value} magnitude.`);calculate();
+}
+function exportWeightsCSV(){exportPortsCSV();}
+function numericParts(line){return line.trim().split(/[\s,;]+/).map(Number);}
+function buildCstPattern(text,name){
+ if(name.toLowerCase().endsWith('.ffs'))throw Error('CST .ffs thường là file binary proprietary. Từ CST hãy Export Farfield as ASCII (.txt), với Theta / Phi / Gain hoặc Etheta / Ephi.');
+ let raw=text.replace(/^\uFEFF/,'').split(/\r?\n/), header='',headcols=[];
+ for(let l of raw){if(/theta/i.test(l)&&/phi/i.test(l)&&!/^\s*[-+]?\d/.test(l)){
+  header=l.replace(/^\s*[#;%!]+\s*/,'').trim();
+  headcols=header.split(/\t+|\s{2,}|\s*[,;]\s*/).map(s=>s.trim()).filter(Boolean);
+  if(headcols.length<3){
+   let tags=header.match(/(?:[a-z]+\s*\([^)]*\)|[a-z]+)\s*(?:\[[^\]]+\])?/ig);
+   if(tags&&tags.length>=3)headcols=tags.map(x=>x.trim());
+  }
+  break;
+ }}
+ let manual=$('cstColumns').value==='manual';
+ let ti=manual?Math.round(nVal('cstThetaCol',1))-1:0,pi=manual?Math.round(nVal('cstPhiCol',2))-1:1,
+     vi=manual?Math.round(nVal('cstValueCol',3))-1:2;
+ let mode=manual?$('cstUnits').value:'db';
+ let eth=-1,eph=-1,reTh=-1,imTh=-1,rePh=-1,imPh=-1;
+ if(!manual&&headcols.length>=3){
+  let hi=headerIndex(headcols,['theta','theta[deg]','theta[deg.]']),hp=headerIndex(headcols,['phi','phi[deg]','phi[deg.]']);
+  if(hi<0)hi=headcols.findIndex(s=>/theta/i.test(s));if(hp<0)hp=headcols.findIndex(s=>/\bphi\b/i.test(s));
+  if(hi>=0)ti=hi;if(hp>=0)pi=hp;
+  let cand=headcols.findIndex(s=>/(gain|grlz|directivity|dbi|efficiency)/i.test(s));
+  if(cand>=0){vi=cand;mode=/\blinear\b|\[1\]/i.test(headcols[cand])?'power':'db';}
+  else{
+   eth=headcols.findIndex(s=>/(abs|mag|magnitude)\s*\(\s*e\s*theta\s*\)/i.test(s));
+   eph=headcols.findIndex(s=>/(abs|mag|magnitude)\s*\(\s*e\s*phi\s*\)/i.test(s));
+   reTh=headcols.findIndex(s=>/real\s*\(\s*e\s*theta\s*\)/i.test(s));
+   imTh=headcols.findIndex(s=>/imag\s*\(\s*e\s*theta\s*\)/i.test(s));
+   rePh=headcols.findIndex(s=>/real\s*\(\s*e\s*phi\s*\)/i.test(s));
+   imPh=headcols.findIndex(s=>/imag\s*\(\s*e\s*phi\s*\)/i.test(s));
+   if(eth>=0&&eph>=0)mode='vector_abs';
+   else if([reTh,imTh,rePh,imPh].every(i=>i>=0))mode='vector_complex';
+   else if(eth>=0){mode='field';vi=eth;}
+  }
+ }
+ let samples=[],bad=0,seenData=false;
+ for(let l of raw){let s=l.trim();if(!s||/^[#%!]/.test(s)||!/^[-+]?(?:\d|\.\d)/.test(s))continue;
+  let a=numericParts(s);if(a.some(x=>!Number.isFinite(x))){bad++;continue;}
+  if(a.length<=Math.max(ti,pi,vi))continue;
+  let theta=a[ti],phi=a[pi];if(theta<-.001||theta>180.001||!Number.isFinite(phi)){bad++;continue;}
+  let power;
+  if(mode==='vector_abs'&&eth>=0&&eph>=0&&a.length>Math.max(eth,eph))power=a[eth]**2+a[eph]**2;
+  else if(mode==='vector_complex'&&[reTh,imTh,rePh,imPh].every(i=>i>=0)&&a.length>Math.max(reTh,imTh,rePh,imPh))power=a[reTh]**2+a[imTh]**2+a[rePh]**2+a[imPh]**2;
+  else if(mode==='db')power=Math.pow(10,a[vi]/10);
+  else if(mode==='field')power=a[vi]**2;
+  else power=a[vi];
+  if(!Number.isFinite(power)||power<0){bad++;continue;}
+  let ph=((phi%360)+360)%360;
+  samples.push([Math.round(theta*1e5)/1e5,Math.round(ph*1e5)/1e5,power]);
+  seenData=true;
+  if(samples.length>150000)throw Error('Quá 150.000 mẫu. Hãy export CST với angular resolution thưa hơn.');
+ }
+ if(samples.length<6)throw Error('Không tìm thấy đủ dữ liệu Theta/Phi hợp lệ. CST cần 3 cột theta, phi, gain_dB (hoặc Eθ/Eφ). Bạn có thể chọn Manual columns.');
+ let th=Array.from(new Set(samples.map(x=>x[0]))).sort((a,b)=>a-b),ph=Array.from(new Set(samples.map(x=>x[1]))).sort((a,b)=>a-b), maxP=Math.max(...samples.map(x=>x[2]));
+ if(!(maxP>0))throw Error('Công suất CST pattern bằng 0 ở tất cả các mẫu.');
+ if(th.length<2)throw Error('CST cần ít nhất 2 mẫu Theta khác nhau.');
+ let tLookup=new Map(th.map((a,i)=>[a,i])),pLookup=new Map(ph.map((a,i)=>[a,i]));
+ let rows=th.length,cols=ph.length,grid=new Array(rows*cols).fill(null),counts=new Uint16Array(rows*cols);
+ for(let [t,p,v] of samples){let k=tLookup.get(t)*cols+pLookup.get(p);grid[k]=(grid[k]||0)+v;counts[k]++;}
+ let occupied=0;for(let i=0;i<grid.length;i++){if(counts[i]){grid[i]/=counts[i];occupied++;}}
+ if(occupied<rows*cols*.75 && cols>1)throw Error(`Dữ liệu CST quá thưa (${Math.round(occupied/(rows*cols)*100)}% grid). Hãy export dạng theta/phi full grid hoặc sử dụng pattern khác.`);
+ // Replace missing grid points with nearest populated theta/phi sample along local lattice.
+ for(let tii=0;tii<rows;tii++)for(let pii=0;pii<cols;pii++){
+  let ix=tii*cols+pii;if(grid[ix]!==null)continue;
+  let best=null,min=Infinity;
+  for(let dt=-2;dt<=2;dt++)for(let dp=-2;dp<=2;dp++){
+    let rt=tii+dt,cp=(pii+dp+cols*3)%cols;if(rt<0||rt>=rows)continue;
+    let v=grid[rt*cols+cp];if(v!==null&&v!==undefined&&Math.abs(dt)+Math.abs(dp)<min){min=Math.abs(dt)+Math.abs(dp);best=v;}
+  }
+  grid[ix]=best??0;
+ }
+ grid=grid.map(v=>v/maxP);
+ let warnings=[];
+ if(ph.length===1)warnings.push('Chỉ 1 mặt phẳng Phi: giả định đối xứng quay cho 3D');
+ if(ph.length<9&&ph.length>1)warnings.push('Dữ liệu Phi thưa: 3D nội suy gần đúng');
+ if(th[0]>1||th.at(-1)<179)warnings.push(`Theta chỉ ${th[0]}–${th.at(-1)}°: ngoài miền CST coi bằng 0`);
+ if(bad)warnings.push(`${bad} dòng không hợp lệ đã bỏ qua`);
+ return {fileName:name,kind:mode,theta:th,phi:ph,grid,valid:occupied,rows,cols,maxP,warnings,source:'CST ASCII'};
+}
+function locate(arr,v){
+ if(v<=arr[0])return [0,0,0];if(v>=arr.at(-1))return [arr.length-1,arr.length-1,0];
+ let lo=0,hi=arr.length-1;while(hi-lo>1){let mid=(lo+hi)>>1;if(arr[mid]<=v)lo=mid;else hi=mid;}
+ return [lo,hi,(v-arr[lo])/(arr[hi]-arr[lo])];
+}
+function sampleCstPower(pattern,ux,uy,uz){
+ if(!pattern)return 0;
+ let theta=Math.acos(clamp(uz,-1,1))/RAD;
+ if(theta<pattern.theta[0]-.00001||theta>pattern.theta.at(-1)+.00001)return 0;
+ let phi=(Math.atan2(uy,ux)/RAD+360)%360,
+    [t0,t1,t]=locate(pattern.theta,theta),np=pattern.phi.length,
+    p0=0,p1=0,pp=0;
+ if(np>1){
+  if(phi<pattern.phi[0]){p0=np-1;p1=0;pp=(phi+360-pattern.phi[np-1])/(360-pattern.phi[np-1]+pattern.phi[0]);}
+  else if(phi>=pattern.phi[np-1]){p0=np-1;p1=0;pp=(phi-pattern.phi[np-1])/(360-pattern.phi[np-1]+pattern.phi[0]);}
+  else{let v=locate(pattern.phi,phi);p0=v[0];p1=v[1];pp=v[2];}
+ }
+ let g=pattern.grid,n=np;
+ let v0=(g[t0*n+p0]||0)*(1-pp)+(g[t0*n+p1]||0)*pp;
+ let v1=(g[t1*n+p0]||0)*(1-pp)+(g[t1*n+p1]||0)*pp;
+ return Math.max(0,v0*(1-t)+v1*t);
+}
+function updateCstSummary(){let p=state.cstPattern;if(!p){cstInfo('No CST pattern · analytical element models available.',false);return;}
+ cstInfo(`✓ ${p.fileName} · ${p.rows} θ × ${p.cols} φ · ${p.valid} samples · ${p.kind} (normalized). ${p.warnings.join(' · ')}`,true);
+}
+function loadCst(text,name){let p=buildCstPattern(text,name);state.cstPattern=p;$('elementPattern').value='cst';updateCstSummary();calculate();}
+function sampleCst(){let s=['# CST Farfield ASCII demonstration: analytical cosine^2 FIELD → power = cos^4(theta) for theta≤90°', 'Theta [deg]    Phi [deg]    Abs(Gain)[dB]'];
+ for(let t=0;t<=180;t+=5)for(let ph=0;ph<=360;ph+=15){let factor=Math.pow(Math.max(0,Math.cos(t*RAD)),4),power=10*Math.log10(Math.max(factor,1e-9));s.push(`${t}    ${ph}    ${power.toFixed(6)}`);}
+ download('CST_example_theta_phi_gain.txt',s.join('\n'),'text/plain;charset=utf-8');
+}
+function setURA(nx,ny){$('arrayType').value='planar';$('nx').value=nx;$('ny').value=ny;$('dx').value=38;$('dy').value=38;geometryChanged();calculate();}
+function mapAutoHeight(){
+ let cfg=getControls(),rows=cfg.type==='planar'?cfg.ny:1,cols=cfg.type==='planar'?cfg.nx:cfg.n;
+ // At 1 × 16, ~35 px per row gives readable labels; at 64 × 64 use fit + zoom.
+ if(rows===1)return 340;
+ return clamp(Math.max(610,rows*(rows<=24?40:21)+105),610,1100);
+}
+function sizeMapStage(){let val=$('mapHeight').value;
+ $('arrayMapStage').style.height=(val==='auto'?mapAutoHeight():Number(val))+'px';
+}
+function resetMapView(){state.mapView={zoom:1,panX:0,panY:0};sizeMapStage();drawArrayMap();}
+function zoomMap(factor,anchorX=null,anchorY=null){let v=state.mapView,old=v.zoom,next=clamp(old*factor,.4,28);if(next===old)return;
+ let c=$('arrayCanvas'),w=c.getBoundingClientRect().width,h=c.getBoundingClientRect().height;
+ let ax=anchorX===null?w/2:anchorX,ay=anchorY===null?h/2:anchorY;
+ v.panX=ax-w/2-(ax-w/2-v.panX)*next/old;
+ v.panY=ay-h/2-(ay-h/2-v.panY)*next/old;
+ v.zoom=next;drawArrayMap();
+}
+function drawArrayMap(){
+ let c=$('arrayCanvas');if(!c)return;
+ let {ctx,w,h}=canvasSetup(c),a=state.elements;
+ ctx.fillStyle='#fff';ctx.fillRect(0,0,w,h);state.mapHit=[];
+ if(!a.length)return;
+ let loX=Infinity,hiX=-Infinity,loY=Infinity,hiY=-Infinity;
+ for(let e of a){if(e.x<loX)loX=e.x;if(e.x>hiX)hiX=e.x;if(e.y<loY)loY=e.y;if(e.y>hiY)hiY=e.y;}
+ let cfg=getControls(),v=state.mapView,padX=66,padY=52,iw=Math.max(w-2*padX,50),ih=Math.max(h-2*padY,50);
+ let dx=hiX-loX,dy=hiY-loY,spanX=Math.max(dx,cfg.dx*.8,1),spanY=Math.max(dy,cfg.dy*.8,1);
+ let sc=Math.min(iw/spanX,ih/spanY),cx=(loX+hiX)/2,cy=(loY+hiY)/2;
+ let x0=w/2+v.panX,y0=h/2+v.panY,scale=sc*v.zoom;
+ // Marker size adapts to projected adjacent spacing; labels appear when there is room.
+ let sepX=(cfg.type==='planar'?cfg.nx:cfg.n)>1?Math.abs(scale*cfg.dx):Infinity;
+ let sepY=(cfg.type==='planar'?cfg.ny:1)>1?Math.abs(scale*cfg.dy):Infinity;
+ let gap=Math.min(sepX,sepY);if(!Number.isFinite(gap))gap=32;
+ let rad=clamp(gap*.33,2.5,12.5),labels=gap>=21&&a.length<=512 || gap>=26 && v.zoom>1.4;
+ let xAxis=Math.min(w-9,Math.max(0,x0)),yAxis=Math.min(h-8,Math.max(0,y0));
+ ctx.font='12px Segoe UI';ctx.fillStyle='#6a819f';ctx.textAlign='left';ctx.fillText('+Y ↑  VERTICAL',12,19);ctx.textAlign='right';ctx.fillText('+X  HORIZONTAL →',w-12,h-15);
+ // Aperture boundary and sparse guide lines make a one-column array easier to see.
+ let xL=x0+(loX-cx)*scale,xR=x0+(hiX-cx)*scale,yT=y0-(hiY-cy)*scale,yB=y0-(loY-cy)*scale;
+ ctx.strokeStyle='#d4e4f3';ctx.lineWidth=1;ctx.setLineDash([5,4]);ctx.strokeRect(xL-13,yT-13,Math.max(26,xR-xL+26),Math.max(26,yB-yT+26));ctx.setLineDash([]);
+ for(let i=0;i<a.length;i++){
+  let e=a[i],x=x0+(e.x-cx)*scale,y=y0-(e.y-cy)*scale;
+  state.mapHit.push({x,y,i});if(x<-20||x>w+20||y<-20||y>h+20)continue;
+  let active=i===state.activeElement,rr=active?Math.max(rad+2.5,6):rad;
+  ctx.beginPath();ctx.arc(x,y,rr,0,Math.PI*2);ctx.fillStyle=active?'#ffb658':e.amp<=0?'#d8e0ea':'#2973e9';ctx.fill();
+  ctx.strokeStyle=active?'#b65600':'#f4f9ff';ctx.lineWidth=active?2.5:.9;ctx.stroke();
+  if(labels){ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font=`700 ${rad>=10?'10':rad>=7?'8':'7'}px Segoe UI`;ctx.fillText(String(i+1),x,y+3);}
+ }
+
+ // Overlay exact subarray bounding boxes over physical antenna geometry.
+ if(state.sub.ports.length>0){
+  for(let pi=0;pi<state.sub.ports.length;pi++){
+   let pr=Math.floor(pi/cfg.portNx),pc=pi%cfg.portNx,xxmin=Infinity,xxmax=-Infinity,yymin=Infinity,yymax=-Infinity;
+   for(let lr=0;lr<cfg.subY;lr++)for(let lc=0;lc<cfg.subX;lc++){
+    let ei=(pr*cfg.subY+lr)*cfg.nx+pc*cfg.subX+lc,e1=a[ei],px=x0+(e1.x-cx)*scale,py=y0-(e1.y-cy)*scale;
+    xxmin=Math.min(xxmin,px);xxmax=Math.max(xxmax,px);yymin=Math.min(yymin,py);yymax=Math.max(yymax,py);
+   }
+   let selected=pi===state.sub.selectedPort,edge=Math.max(9,Math.min(18,Math.min(sepX,sepY)*.40)),rx=xxmin-edge,ry=yymin-edge,rw=Math.max(2*edge+3,xxmax-xxmin+edge*2),rh=Math.max(2*edge+3,yymax-yymin+edge*2);
+   if(rx>w||ry>h||rx+rw<0||ry+rh<0)continue;
+   ctx.fillStyle=selected?'rgba(255,170,54,.12)':'rgba(5,137,108,.035)';ctx.fillRect(rx,ry,rw,rh);
+   ctx.lineWidth=selected?2.7:1.65;ctx.strokeStyle=selected?'#e78c16':'#169879';ctx.setLineDash(selected?[]:[]);ctx.strokeRect(rx,ry,rw,rh);
+   if(rw>25&&rh>35&&pi<4096){
+    let txt='P'+(pi+1),fSize=rw>=55?12:10;ctx.font=`800 ${fSize}px Segoe UI`;let tw=ctx.measureText(txt).width;
+    if(tw+8<rw){let lx=rx+rw/2,ly=ry-4;ctx.fillStyle=selected?'#fff0d7':'#dcf5eb';ctx.fillRect(lx-tw/2-4,ly-12,tw+8,15);ctx.fillStyle=selected?'#a75600':'#0d6e59';ctx.textAlign='center';ctx.fillText(txt,lx,ly-2);}
+   }
+  }
+ }
+ // Highlight selected element even in dense maps; show a callout so #4096 can be identified.
+ let i=clamp(state.activeElement,0,a.length-1),e=a[i],xx=x0+(e.x-cx)*scale,yy=y0-(e.y-cy)*scale;
+ if(xx>=0&&xx<=w&&yy>=0&&yy<=h&&(!labels||a.length>512)){
+  ctx.beginPath();ctx.arc(xx,yy,Math.max(rad+4,9),0,2*Math.PI);ctx.strokeStyle='#f09b1a';ctx.lineWidth=2;ctx.stroke();
+  let tx=clamp(xx+15,6,w-70),ty=clamp(yy-12,22,h-5);ctx.fillStyle='#b65b06';ctx.font='bold 12px Segoe UI';ctx.textAlign='left';ctx.fillText('#'+(i+1),tx,ty);
+ }
+ let row=cfg.type==='planar'?Math.floor(i/cfg.nx)+1:1,col=cfg.type==='planar'?i%cfg.nx+1:i+1;
+ let portId=portForElement(i,cfg),pr=Math.floor(portId/cfg.portNx)+1,pc=portId%cfg.portNx+1,localId=localForElement(i,cfg);
+ el('selectedElement',`Element #${i+1} · Row ${row}, Col ${col} → RF Port ${portId+1} (port row ${pr}, col ${pc}) · Local #${localId+1} · Weight ${e.amp.toFixed(4)} (${cfg.mode}) · Phase ${e.phase.toFixed(2)}° · (X,Y,Z)=(${e.x},${e.y},${e.z||0}) mm`);
+ el('mapZoomLabel',`${Math.round(v.zoom*100)}%`);
+ el('mapScaleInfo',`${cfg.type==='planar'?cfg.nx+' × '+cfg.ny:cfg.n+' × 1'} elements · physical aperture ${dx.toFixed(1)} × ${dy.toFixed(1)} mm · zoom ${Math.round(v.zoom*100)}%`);
+}
+function activateElement(index){state.activeElement=clamp(index,0,state.elements.length-1);activatePort(portForElement(state.activeElement,getControls()));}
+function renderCstPhysicsNote(r){if(!r)return;let p=r.model.cst;if(!p)el('accuracyNote','Theoretical AF · no mutual coupling or measured embedded element pattern.');if(p){
+  el('accuracyNote',r.model.cstRole==='total'?'Imported CST full-array power pattern · no Array Factor applied.':'Analytical AF × CST single-element pattern · no mutual coupling.');
+  let note=r.model.cstRole==='total'?`ℹ️ CST FULL-ARRAY reference: ${p.fileName} (${p.rows} θ × ${p.cols} φ). Hiển thị trực tiếp CST pattern, KHÔNG nhân thêm Array Factor. Weight / phase / vị trí element không ảnh hưởng trace này. Công suất được chuẩn hóa và nội suy từ CST. ${p.warnings.join('; ')}.`:`ℹ️ CST SINGLE-ELEMENT pattern: ${p.fileName} (${p.rows} θ × ${p.cols} φ). P_total = |Σ wₙe^{j(φₙ+k rₙ·u)}|² × P_element,CST. CST normalized to peak; absolute gain, coupling and efficiency NOT inferred. ${p.warnings.join('; ')}.`;
+  el('physicsNote',note);
+  document.querySelector('#outD + em').textContent='3D directivity of composite pattern · dBi';
+ }
+}
+// End of extension helpers.
+
+// Controls and events
+$('calc').addEventListener('click',calculate);$('applyPreset').addEventListener('click',()=>{applyPresets();errText('Presets applied · press CALCULATE to update plots');});
+$('arrayType').addEventListener('change',geometryChanged);for(let id of ['count','nx','ny'])$(id).addEventListener('change',geometryChanged);for(let id of ['dx','dy'])$(id).addEventListener('change',spacingChanged);
+$('ampMode').addEventListener('change',()=>{el('magnitudeType',$('ampMode').value==='power'?'Power':'Voltage');});
+$('ampPreset').addEventListener('change',()=>applyPresets());$('phasePreset').addEventListener('change',()=>applyPresets());for(let id of ['steerAz','steerEl','phaseStep'])$(id).addEventListener('change',()=>{if($('phasePreset').value!=='custom')applyPresets();});
+for(let b of document.querySelectorAll('[data-plot]'))b.addEventListener('click',()=>{state.view=b.dataset.plot;document.querySelectorAll('[data-plot]').forEach(x=>x.classList.toggle('sel',x===b));draw2D();});
+for(let x of ['show2dPeaks','show2dBw'])$(x).addEventListener('change',draw2D);for(let x of ['show3dPeaks','show3dContour','show3dBw'])$(x).addEventListener('change',paint3D);
+for(let b of document.querySelectorAll('[data-trace]'))b.addEventListener('click',()=>setTrace(Number(b.dataset.trace)));
+$('clearTrace').addEventListener('click',()=>{state.traces[state.current]=null;state.last=state.traces.find(Boolean)||null;updateTraceButtons();updateMetrics();renderAll();});$('clearAll').addEventListener('click',()=>{state.traces=[null,null,null];state.last=null;updateTraceButtons();updateMetrics();renderAll();});
+$('restoreDefault').addEventListener('click',()=>{makeExample();calculate();});$('clearPhase').addEventListener('click',()=>{for(let e of state.elements)e.phase=0;$('phasePreset').value='uniform';makeTables();});
+$('saveCfg').addEventListener('click',saveJSON);$('loadCfg').addEventListener('click',()=>$('fileInput').click());$('fileInput').addEventListener('change',e=>{let file=e.target.files[0];if(file)loadJSON(file);e.target.value='';});$('saveCsv').addEventListener('click',exportCSV);$('export3dCsv').addEventListener('click',export3D);$('savePng').addEventListener('click',()=>{let c=$('plot3d');c.toBlob(blob=>{if(!blob)return;let url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='antenna_beam_3D.png';a.click();setTimeout(()=>URL.revokeObjectURL(url),4000);},'image/png');});
+$('resetCamera').addEventListener('click',()=>{state.camera={yaw:-1.05,pitch:.36,zoom:1};paint3D();});
+let drag=null;let cv=$('plot3d');cv.addEventListener('pointerdown',e=>{cv.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,yaw:state.camera.yaw,pitch:state.camera.pitch};});cv.addEventListener('pointermove',e=>{if(!drag)return;state.camera.yaw=drag.yaw+(e.clientX-drag.x)*.008;state.camera.pitch=clamp(drag.pitch+(e.clientY-drag.y)*.008,-1.48,1.48);paint3D();});for(let name of ['pointerup','pointercancel','lostpointercapture'])cv.addEventListener(name,()=>drag=null);cv.addEventListener('wheel',e=>{e.preventDefault();state.camera.zoom=clamp(state.camera.zoom*Math.exp(-e.deltaY*.001),.42,2.5);paint3D();},{passive:false});
+let rs=null;window.addEventListener('resize',()=>{clearTimeout(rs);rs=setTimeout(renderAll,120);});
+
+// === Studio PRO event handlers ===
+for(let b of document.querySelectorAll('[data-cut]'))b.addEventListener('click',()=>{
+ state.cut=b.dataset.cut;document.querySelectorAll('[data-cut]').forEach(x=>x.classList.toggle('sel',x===b));
+ updateMetrics();draw2D();
+});
+$('example8x4').addEventListener('click',()=>setURA(8,4));
+$('example16x8').addEventListener('click',()=>setURA(16,8));
+$('example64x64').addEventListener('click',()=>setURA(64,64));
+$('pagePrev').addEventListener('click',()=>{state.editPage=Math.max(0,state.editPage-1);makeTables();});
+$('pageNext').addEventListener('click',()=>{state.editPage=Math.min(Math.ceil(state.elements.length/state.editPageSize)-1,state.editPage+1);makeTables();});
+$('editPageNumber').addEventListener('change',()=>{state.editPage=clamp(Math.round(nVal('editPageNumber',1))-1,0,Math.ceil(state.elements.length/state.editPageSize)-1);makeTables();});
+$('mapFit').addEventListener('click',resetMapView);
+$('mapZoomIn').addEventListener('click',()=>zoomMap(1.4));
+$('mapZoomOut').addEventListener('click',()=>zoomMap(1/1.4));
+$('mapHeight').addEventListener('change',()=>{sizeMapStage();drawArrayMap();});
+const mapCanvas=$('arrayCanvas');let mapDrag=null;
+mapCanvas.addEventListener('pointerdown',ev=>{mapCanvas.setPointerCapture(ev.pointerId);mapDrag={x:ev.clientX,y:ev.clientY,panX:state.mapView.panX,panY:state.mapView.panY,moved:false};});
+mapCanvas.addEventListener('pointermove',ev=>{if(!mapDrag)return;let dx=ev.clientX-mapDrag.x,dy=ev.clientY-mapDrag.y;if(Math.hypot(dx,dy)>4)mapDrag.moved=true;if(mapDrag.moved){state.mapView.panX=mapDrag.panX+dx;state.mapView.panY=mapDrag.panY+dy;drawArrayMap();}});
+mapCanvas.addEventListener('pointerup',ev=>{if(!mapDrag)return;let moved=mapDrag.moved;mapDrag=null;if(moved){state.mapDragged=Date.now();return;}let b=mapCanvas.getBoundingClientRect(),x=ev.clientX-b.left,y=ev.clientY-b.top,nearest=null,d=1e99;for(let p of state.mapHit){let k=Math.hypot(x-p.x,y-p.y);if(k<d){nearest=p;d=k;}}if(nearest&&d<Math.max(16,Math.min(28,15*state.mapView.zoom)))activateElement(nearest.i);});
+mapCanvas.addEventListener('pointercancel',()=>mapDrag=null);
+mapCanvas.addEventListener('wheel',ev=>{ev.preventDefault();let box=mapCanvas.getBoundingClientRect();zoomMap(ev.deltaY<0?1.2:1/1.2,ev.clientX-box.left,ev.clientY-box.top);},{passive:false});
+const mapObserver=typeof ResizeObserver!=='undefined'?new ResizeObserver(()=>drawArrayMap()):null;if(mapObserver)mapObserver.observe($('arrayMapStage'));
+
+$('importWeights').addEventListener('click',()=>$('weightsFile').click());
+$('weightsFile').addEventListener('change',e=>{let f=e.target.files[0];if(f)parseTextFile(f,importWeightsCSV);e.target.value='';});
+$('exportWeights').addEventListener('click',exportWeightsCSV);
+$('sampleWeights').addEventListener('click',exportPortsCSV);
+$('importCst').addEventListener('click',()=>$('cstFile').click());
+$('cstFile').addEventListener('change',e=>{let f=e.target.files[0];if(f)parseTextFile(f,loadCst);e.target.value='';});
+$('clearCst').addEventListener('click',()=>{state.cstPattern=null;updateCstSummary();if($('elementPattern').value==='cst')$('elementPattern').value='cos2';calculate();});
+$('sampleCst').addEventListener('click',sampleCst);
+$('cstColumns').addEventListener('change',()=>{$('manualCst').style.display=$('cstColumns').value==='manual'?'block':'none';});
+$('cstRole').addEventListener('change',()=>{if(state.cstPattern&&$('elementPattern').value==='cst')calculate();});
+$('elementPattern').addEventListener('change',()=>{if($('elementPattern').value==='cst'&&!state.cstPattern){errText('Cần import CST ASCII pattern trước khi dùng');}});
+
+
+// V4 event binding: row-first RF port controls and subarray master template.
+$('example8x8sub').addEventListener('click',v4Example);
+$('applySubConfig').addEventListener('click',()=>{try{let cfg=getControls();initPortSystem(cfg);applyPresets(false,true);sizeMapStage();makeTables();calculate();}catch(e){alert(e.message);}});
+$('subX').addEventListener('change',()=>{try{refreshPanels();}catch(e){errText(e.message);}});
+$('subY').addEventListener('change',()=>{try{refreshPanels();}catch(e){errText(e.message);}});
+$('portPrev').addEventListener('click',()=>{state.sub.firstRow=Math.max(0,state.sub.firstRow-state.sub.rowsShown);renderPortRows();});
+$('portNext').addEventListener('click',()=>{state.sub.firstRow=Math.min(getControls().portNy-state.sub.rowsShown,state.sub.firstRow+state.sub.rowsShown);renderPortRows();});
+$('portFirstRow').addEventListener('change',()=>{state.sub.firstRow=clamp(Math.round(nVal('portFirstRow',1))-1,0,getControls().portNy-1);renderPortRows();});
+$('portRowsShown').addEventListener('change',()=>{state.sub.rowsShown=Number($('portRowsShown').value);renderPortRows();});
+$('portRowEditor').addEventListener('change',ev=>{let inp=ev.target;if(!inp.matches('[data-port]'))return;
+ let i=Number(inp.dataset.port),f=inp.dataset.field,v=Number(inp.value);if(!Number.isFinite(v)||f==='amp'&&v<0){alert('Giá trị không hợp lệ');renderPortRows();return;}
+ state.sub.ports[i][f]=v;state.sub.selectedPort=i;if(f==='phase')$('phasePreset').value='custom';if(f==='amp')$('ampPreset').value='custom';syncElements();drawArrayMap();
+});
+$('subTemplateEditor').addEventListener('change',ev=>{let inp=ev.target;if(!inp.matches('[data-local]'))return;
+ let i=Number(inp.dataset.local),f=inp.dataset.field,v=Number(inp.value);if(!Number.isFinite(v)||f==='amp'&&v<0){alert('Giá trị không hợp lệ');renderTemplateEditor();return;}
+ state.sub.template[i][f]=v;syncElements();drawArrayMap();
+});
+$('resetTemplate').addEventListener('click',()=>{let cfg=getControls();state.sub.template.forEach((t,i)=>{t.amp=1;t.phase=0;t.x=(i%cfg.subX)*cfg.dx;t.y=Math.floor(i/cfg.subX)*cfg.dy;t.z=0;});syncElements();makeTables();});
+$('internalSteer').addEventListener('click',()=>{let cfg=getControls(),k=2*Math.PI*(cfg.freq*1e6)/C0,az=cfg.steerAz*RAD,ev=cfg.steerEl*RAD,
+ ux=Math.cos(ev)*Math.sin(az),uy=Math.sin(ev),uz=Math.cos(ev)*Math.cos(az);
+ state.sub.template.forEach(t=>t.phase=Number((-k*(t.x*ux+t.y*uy+(t.z||0)*uz)*.001/RAD).toFixed(4)));
+ syncElements();makeTables();});
+$('importPortCsv').addEventListener('click',()=>$('portCsvFile').click());
+$('portCsvFile').addEventListener('change',ev=>{let f=ev.target.files[0];if(f)parseTextFile(f,importPortsCSV);ev.target.value='';});
+$('exportPortCsv').addEventListener('click',exportPortsCSV);$('downloadPortTemplate').addEventListener('click',exportPortsCSV);
+$('importTemplateCsv').addEventListener('click',()=>$('templateCsvFile').click());
+$('templateCsvFile').addEventListener('change',ev=>{let f=ev.target.files[0];if(f)parseTextFile(f,importTemplateCSV);ev.target.value='';});
+$('exportTemplateCsv').addEventListener('click',exportTemplateCSV);
+$('importPhysicalCsv').addEventListener('click',()=>$('physicalCsvFile').click());
+$('physicalCsvFile').addEventListener('change',ev=>{let f=ev.target.files[0];if(f)parseTextFile(f,importPhysicalCSV);ev.target.value='';});
+$('exportPhysicalCsv').addEventListener('click',exportPhysicalCSV);
+// Override the pre-existing template download with a port-map-aligned CSV.
+$('importWeights').textContent='↑ Import port/legacy CSV';$('exportWeights').textContent='↓ Export RF ports CSV';
+$('restoreDefault').textContent='↺ Example 24 ULA';
+v4Example();updateCstSummary();
+
+</script>
+</body></html>

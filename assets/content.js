@@ -87,6 +87,23 @@ window.RFW_CONTENT = {
         zh:'根据频率和距离计算路径损耗、理想接收功率和波长。'
       },
       tags: ['FSPL','link budget','RF']
+    },
+    {
+      id: 'antenna-array-studio-pro-v5',
+      category: 'antenna',
+      href: 'tools/antenna-array-studio-pro-v5.html',
+      symbol: '3D',
+      title: {
+        vi: 'Antenna Array Studio PRO V5',
+        en: 'Antenna Array Studio PRO V5',
+        zh: '天线阵列设计工作室 PRO V5'
+      },
+      description: {
+        vi: 'Thiết kế mảng ULA/URA tới 4096 phần tử; búp sóng 2D/3D, RF port/subarray, import CST và CSV.',
+        en: 'Design ULA/URA arrays up to 4096 elements with 2D/3D patterns, RF port/subarray mapping, CST and CSV import.',
+        zh: '设计最多4096阵元的ULA/URA阵列，支持二维/三维方向图、RF端口/子阵映射以及CST和CSV导入。'
+      },
+      tags: ['antenna', 'array', 'URA', 'ULA', '4096', '3D', 'CST', 'RF port', 'subarray', 'beamforming']
     }
     /* THÊM CÔNG CỤ MỚI Ở ĐÂY */
   ],
