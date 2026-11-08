@@ -1,22 +1,13 @@
-<!doctype html>
-<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1220"><title>ULA Array Factor 2D | RF Research Lab</title><link rel="stylesheet" href="../assets/style.css"></head>
-<body>
-<header class="site-header"><div class="container header-inner"><a class="brand" href="../index.html"><span class="brand-mark">⌁</span><span>RF Research Lab</span></a><nav class="main-nav"><a href="../index.html#lessons">Bài học</a><a href="../index.html#tools">Công cụ</a></nav></div></header>
-<main class="content-page"><a class="back-link" href="../index.html#tools">← Quay lại danh sách công cụ</a><div class="page-label">ANTENNA / INTERACTIVE TOOL</div><h1>ULA Array Factor 2D</h1><p class="page-lead">Tính toán búp sóng của mảng tuyến tính đồng nhất (ULA), khảo sát hướng quét và độ rộng búp sóng tại mức -3 dB.</p>
-<div class="tool-layout">
-<section class="panel"><h2>Tham số mảng anten</h2>
-<div class="field"><label for="n">Số phần tử (N)</label><input id="n" type="number" value="8" min="2" max="64" step="1"><small>Từ 2 đến 64 phần tử</small></div>
-<div class="field"><label for="spacing">Khoảng cách d / λ</label><input id="spacing" type="number" value="0.5" min="0.1" max="2" step="0.05"><small>Chuẩn hóa theo bước sóng</small></div>
-<div class="field"><label for="steer">Góc hướng búp θ₀ (độ)</label><input id="steer" type="number" value="0" min="-90" max="90" step="1"><small>0° là hướng vuông góc trục mảng (broadside)</small></div>
-<div class="field"><label for="frequency">Tần số (GHz)</label><input id="frequency" type="number" value="3.5" min="0.01" max="300" step="0.1"><small>Chỉ dùng để quy đổi khoảng cách thực</small></div>
-<button class="btn btn-secondary" id="reset" type="button">Khôi phục mặc định</button>
-</section>
-<div><section class="panel"><h2>Array factor chuẩn hóa (dB)</h2><div class="chart-container"><canvas id="plot" aria-label="Biểu đồ array factor 2D" role="img"></canvas></div><div class="chart-legend"><span><i class="legend-dot" style="background:#54e0bd"></i>Array factor</span><span><i class="legend-dot" style="background:#eec17a"></i>Hướng cực đại / mức -3 dB</span></div></section>
-<div class="result-grid"><div class="metric"><small>Hướng búp chính</small><strong id="peak">0°</strong><span>so với broadside</span></div><div class="metric"><small>HPBW (-3 dB)</small><strong id="hpbw">—</strong><span id="bounds">Giới hạn góc: —</span></div><div class="metric"><small>Bước sóng</small><strong id="lambda">—</strong><span>ở tần số đã chọn</span></div><div class="metric"><small>Khoảng cách phần tử</small><strong id="distance">—</strong><span>d = (d / λ) × λ</span></div></div>
-<div class="note">Mô hình lý tưởng: các phần tử đồng biên độ, điều khiển pha chính xác, không xét coupling, pattern phần tử, suy hao phần cứng và lỗi hiệu chuẩn. HPBW chỉ được trả về nếu tìm thấy đủ hai giao điểm -3 dB trong miền -90° đến 90°.</div></div></div>
-<section class="panel prose" style="margin-top:20px"><h2>Phương trình tính toán</h2><p>Với mảng tuyến tính <em>N</em> phần tử, khoảng cách <em>d</em>, búp sóng hướng tới θ₀, hệ số mảng chuẩn hóa:</p><div class="formula">AF(θ) = |(1/N) × Σₙ₌₀ᴺ⁻¹ exp(j × 2πn × (d/λ) × [sin θ − sin θ₀])|</div><p>Biểu đồ hiển thị <strong>20 log₁₀(AF)</strong>, giới hạn mức dưới -50 dB. Đây là array factor tương đối, <strong>không phải</strong> gain tuyệt đối, EIRP hay công suất bức xạ thực của anten.</p></section></main>
-<footer class="footer"><div class="container">RF Research Lab · Công cụ HTML/JavaScript chạy hoàn toàn trong trình duyệt</div></footer>
-<script>
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07111f"><title>ULA Array Factor 2D | RF Wireless Lab</title><link rel="icon" type="image/svg+xml" href="../favicon.svg"><link rel="stylesheet" href="../assets/style.css"><script defer src="../assets/i18n.js"></script></head><body data-page="tool"><header class="topbar page-topbar"><div class="shell nav-row"><a href="../" class="brand"><span class="brand-symbol" aria-hidden="true"><svg viewBox="0 0 42 42" fill="none"><path d="M9 24.5c8-8 16-8 24 0M14 29c5-5 9-5 14 0" stroke="#81F7CF" stroke-width="2.6" stroke-linecap="round"/><circle cx="21" cy="34" r="2.7" fill="#81F7CF"/></svg></span><span class="brand-words"><strong>RF Wireless Lab</strong><small>RF &amp; Wireless Engineering</small></span></a><div class="nav-actions" style="margin-left:auto"><a class="nav-cta" href="../#tools" data-i18n="nav.backTools">Quay về công cụ</a><div class="language-control"><select data-lang-switch aria-label="Display language"><option value="vi">VI · Tiếng Việt</option><option value="en">EN · English</option><option value="zh">中文 · 简体</option></select></div></div></div></header><main class="content-page"><a class="back-link" href="../#tools" data-i18n="nav.backTools">Quay về công cụ</a><div class="page-label">ANTENNA / INTERACTIVE TOOL</div><h1 data-page-title data-i18n="array.head">Công cụ ULA Array Factor 2D</h1><p class="page-lead" data-i18n="array.lead">Mô phỏng búp sóng lý tưởng của mảng tuyến tính đồng nhất, góc lái búp và độ rộng −3 dB.</p>
+<div class="tool-layout"><section class="panel"><h2 data-i18n="array.inputs">Tham số mảng anten</h2>
+<div class="field"><label for="n" data-i18n="array.n">Số phần tử (N)</label><input id="n" type="number" value="8" min="2" max="64" step="1"><small data-i18n="array.nhelp">Từ 2 đến 64 phần tử</small></div>
+<div class="field"><label for="spacing" data-i18n="array.spacing">Khoảng cách d / λ</label><input id="spacing" type="number" value="0.5" min="0.1" max="2" step="0.05"><small data-i18n="array.spacinghelp">Chuẩn hóa theo bước sóng</small></div>
+<div class="field"><label for="steer" data-i18n="array.steer">Góc hướng búp θ₀ (độ)</label><input id="steer" type="number" value="0" min="-90" max="90" step="1"><small data-i18n="array.steerhelp">0° tương ứng hướng broadside</small></div>
+<div class="field"><label for="frequency" data-i18n="array.frequency">Tần số (GHz)</label><input id="frequency" type="number" value="3.5" min="0.01" max="300" step="0.1"><small data-i18n="array.frequencyhelp">Dùng để quy đổi khoảng cách thực</small></div>
+<button class="button button-outline" id="reset" type="button" data-i18n="array.reset">Khôi phục mặc định</button>
+</section><div><section class="panel"><h2 data-i18n="array.chart">Array factor chuẩn hóa (dB)</h2><div class="chart-container"><canvas id="plot" aria-label="2D array factor pattern" role="img"></canvas></div><div class="chart-legend"><span><i class="legend-dot" style="background:#54e0bd"></i><span data-i18n="array.legend1">Array factor</span></span><span><i class="legend-dot" style="background:#eec17a"></i><span data-i18n="array.legend2">Búp chính / −3 dB</span></span></div></section>
+<div class="result-grid"><div class="metric"><small data-i18n="array.metric1">Hướng búp chính</small><strong id="peak">0°</strong><span data-i18n="array.metric1help">So với broadside</span></div><div class="metric"><small data-i18n="array.metric2">HPBW (−3 dB)</small><strong id="hpbw">—</strong><span id="bounds">—</span></div><div class="metric"><small data-i18n="array.metric3">Bước sóng</small><strong id="lambda">—</strong><span data-i18n="array.metric3help">Tại tần số đã chọn</span></div><div class="metric"><small data-i18n="array.metric4">Khoảng cách phần tử</small><strong id="distance">—</strong><span>d = (d / λ) × λ</span></div></div><div class="note" data-i18n="array.note">Mô hình lý tưởng: không xét coupling, pattern phần tử, sai lệch biên độ/pha, scan loss hay sai số hiệu chuẩn.</div></div></div>
+<section class="panel prose" style="margin-top:22px"><h2 data-i18n="array.formula">Phương trình tính toán</h2><p data-i18n="array.formulaText">Với mảng ULA gồm N phần tử, khoảng cách d và hướng quét θ₀, array factor chuẩn hóa được tính bằng:</p><div class="formula">AF(θ) = | (1/N) Σₙ₌₀ᴺ⁻¹ exp(j 2πn(d/λ)[sinθ − sinθ₀]) |</div><p data-i18n="array.formulaNote">Giá trị trên đồ thị là AF tương đối, không phải gain tuyệt đối hoặc EIRP.</p></section></main><footer class="plain-footer"><div class="shell"><span>© RF Wireless Lab · rfwirelesslab.com</span><a href="../#tools" data-i18n="nav.backTools">Quay về công cụ</a></div></footer><script>
 (() => {
  'use strict';
  const $=id=>document.getElementById(id), canvas=$('plot'),ctx=canvas.getContext('2d');
@@ -53,7 +44,7 @@
    const wavelength=299.792458/f;
    $('peak').textContent=steer.toFixed(1)+'°';
    $('hpbw').textContent=left!==null&&right!==null?(right-left).toFixed(2)+'°':'—';
-   $('bounds').textContent=left!==null&&right!==null?`Từ ${left.toFixed(2)}° đến ${right.toFixed(2)}°`:'Không xác định đủ hai biên';
+   $('bounds').textContent=left!==null&&right!==null?RFW_I18N.translate(RFW_I18N.t('array.bound'),{a:left.toFixed(2),b:right.toFixed(2)}):RFW_I18N.t('array.boundNone');
    $('lambda').textContent=wavelength.toFixed(2)+' mm';
    $('distance').textContent=(wavelength*d).toFixed(2)+' mm';
    draw(data,steer,left,right,threshold);
@@ -79,6 +70,6 @@
  }
  inputs.forEach(id=>$(id).addEventListener('input',compute));
  $('reset').addEventListener('click',()=>{Object.entries({n:8,spacing:.5,steer:0,frequency:3.5}).forEach(([k,v])=>$(k).value=v);compute()});
- window.addEventListener('resize',compute);compute();
+ window.addEventListener('resize',compute);document.addEventListener('rfwl:language',compute);compute();
 })();
 </script></body></html>
